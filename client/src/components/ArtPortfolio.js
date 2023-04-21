@@ -1,8 +1,17 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ArtPortfolio = () => {
   const [hoverArt, setHoverArt] = useState(-1);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setVisible(true);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   const images = [
     {
@@ -92,7 +101,7 @@ const ArtPortfolio = () => {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper className={visible ? "fade-in" : ""}>
         {images.map((image, index) => (
           <ArtDiv
             key={index}
@@ -122,6 +131,11 @@ const Wrapper = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   gap: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  &.fade-in {
+    opacity: 1;
+  }
 `;
 
 const ArtDiv = styled.div`

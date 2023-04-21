@@ -10,7 +10,7 @@ const Updates = () => {
           THE DIABETIC, a feature-length film by Mitchell Stafiej, is now
           available for free streaming on Tubi. I created visual effects seen
           during the opening segment, and collaborated with Mitchell for the
-          original score under the project name FUCKERS. It’s a wild film, a
+          original score under the project name FUCKERS. It's a wild film, a
           must for fans of The Comedy, Good Time, and lo-fi mayhem.
         </P>
         <P>Read more...</P>

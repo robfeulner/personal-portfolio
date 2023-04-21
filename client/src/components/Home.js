@@ -1,10 +1,21 @@
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 import Updates from "./Updates";
 
 const Home = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setVisible(true);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <>
-      <Wrapper>
+      <Wrapper className={visible ? "fade-in" : ""}>
         <BioDiv>
           <BioSpan>
             Rob Feulner (b. 1987) is a video artist hailing from Montréal,
@@ -22,10 +33,10 @@ const Home = () => {
         </BioDiv>
         <SecondRow>
           {/* <ImgRow> */}
-            <ImgPress
-              src="/images/robfeulner_press08-1200.jpg"
-              alt="Rob Feulner"
-            />
+          <ImgPress
+            src="/images/robfeulner_press08-1200.jpg"
+            alt="Rob Feulner"
+          />
           {/* </ImgRow> */}
           <Updates />
         </SecondRow>
@@ -37,6 +48,11 @@ const Home = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  &.fade-in {
+    opacity: 1;
+  }
 `;
 const BioDiv = styled.div`
   max-width: 70%;
@@ -52,9 +68,7 @@ const SecondRow = styled.div`
   margin-top: 2%;
 `;
 
-const ImgRow = styled.div`
-  
-`;
+const ImgRow = styled.div``;
 
 const ImgPress = styled.img`
   max-width: 50%;
