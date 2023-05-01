@@ -10,6 +10,11 @@ import Bio from "./components/bio/Bio";
 import CableBox from "./components/art portfolio/CableBox";
 import PivotForwardCollapse from "./components/art portfolio/PivotForwardCollapse";
 import Carmen from "./components/art portfolio/Carmen";
+import OffTheAir from "./components/art portfolio/OffTheAir";
+import VideoArt from "./components/art portfolio/VideoArt";
+import BurningDesire from "./components/art portfolio/BurningDesire";
+import ManAndHisProgress from "./components/art portfolio/ManAndHisProgress";
+import PuertoRicoTautology from "./components/art portfolio/PuertoRicoTautology";
 
 const App = () => {
   return (
@@ -27,6 +32,20 @@ const App = () => {
             element={<PivotForwardCollapse />}
           />
           <Route path="/art-portfolio/carmen" element={<Carmen />} />
+          <Route path="/art-portfolio/off-the-air" element={<OffTheAir />} />
+          <Route path="/art-portfolio/video-art" element={<VideoArt />} />
+          <Route
+            path="/art-portfolio/burning-desire"
+            element={<BurningDesire />}
+          />
+          <Route
+            path="/art-portfolio/man-and-his-progress"
+            element={<ManAndHisProgress />}
+          />
+          <Route
+            path="/art-portfolio/puerto-rico-tautology"
+            element={<PuertoRicoTautology />}
+          />
           <Route path="/web-portfolio" element={<WebPortfolio />} />
           <Route path="/bio" element={<Bio />} />
         </Routes>

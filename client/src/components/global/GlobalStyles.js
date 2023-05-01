@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
 
     body{
         margin: 2% 5%;
-        
+        background-color: #d1fffc;
     }
     
     p{

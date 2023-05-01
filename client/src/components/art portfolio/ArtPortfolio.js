@@ -64,6 +64,7 @@ const ArtPortfolio = () => {
       hoverSrc: "/images/art-portfolio/adultswim-gif-01-450.gif",
       description: "Television / Web Broadcast, 2018",
       length: "11min 51sec",
+      link: "/art-portfolio/off-the-air",
     },
     {
       src: "/images/art-portfolio/videoart-still-01-450.jpg",
@@ -71,6 +72,7 @@ const ArtPortfolio = () => {
       hoverSrc: "/images/art-portfolio/videoart-gif-01-450.gif",
       description: `Performance / Home Video Release / Installation, 2017`,
       length: "29min 04sec",
+      link: "/art-portfolio/video-art",
     },
 
     {
@@ -79,6 +81,7 @@ const ArtPortfolio = () => {
       hoverSrc: "/images/art-portfolio/burningdesire-gif-01-450.gif",
       description: "Video, 2017",
       length: "5min 06sec",
+      link: "/art-portfolio/burning-desire",
     },
     {
       src: "/images/art-portfolio/expo67-still-01-450.jpg",
@@ -86,6 +89,7 @@ const ArtPortfolio = () => {
       hoverSrc: "/images/art-portfolio/expo67-gif-01-450.gif",
       description: "Installation, 2017",
       length: "Eastern Bloc, Montréal",
+      link: "/art-portfolio/man-and-his-progress",
     },
     {
       src: "/images/art-portfolio/prtautology-still-01-450.jpg",
@@ -93,6 +97,7 @@ const ArtPortfolio = () => {
       hoverSrc: "/images/art-portfolio/prtautology-gif-01-450.gif",
       description: "Video, 2016",
       length: "6min 59sec",
+      link: "/art-portfolio/puerto-rico-tautology",
     },
     {
       src: "/images/art-portfolio/garfield-still-01-450.jpg",

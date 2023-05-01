@@ -50,5 +50,49 @@
       "description": "Photo from Télépresence performance (2018), courtesy of Paloma Kop",
       "link": "/images/art-portfolio/carmen/carmen04.jpg"
     }
+  ],
+  "offtheair": [
+    {
+      "description": "Off the Air still",
+      "link": "/images/art-portfolio/offtheair/offtheair-01.jpg"
+    },
+    {
+      "description": "Off the Air still",
+      "link": "/images/art-portfolio/offtheair/offtheair-02.jpg"
+    },
+    {
+      "description": "Off the Air still",
+      "link": "/images/art-portfolio/offtheair/offtheair-03.jpg"
+    }
+  ],
+  "videoart": [
+    {
+      "description": "Video Art for Conditional Malaise still",
+      "link": "/images/art-portfolio/videoart/videoart-01.png"
+    },
+    {
+      "description": "Video Art for Conditional Malaise DVD",
+      "link": "/images/art-portfolio/videoart/videoart-02.jpg"
+    },
+    {
+      "description": "Video Art for Conditional Malaise DVD",
+      "link": "/images/art-portfolio/videoart/videoart-03.jpg"
+    },
+    {
+      "description": "Video Art for Conditional Malaise still",
+      "link": "/images/art-portfolio/videoart/videoart-04.jpg"
+    },
+    {
+      "description": "Video Art for Conditional Malaise still",
+      "link": "/images/art-portfolio/videoart/videoart-05.png"
+    },
+    {
+      "description": "NYC performance with Billy Gomberg. Photo by Paloma Kop.",
+      "link": "/images/art-portfolio/videoart/videoart-06.jpg"
+    },
+    {
+      "description": "Single-channel projection at Newfields (Indianapolis, Indiana)",
+      "link": "/images/art-portfolio/videoart/videoart-07.jpg"
+    }
   ]
 }

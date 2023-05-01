@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import PersonalPortfolio from "./PersonalPortfolio";
 import Suoni from "./Suoni";
 import SportsSavvy from "./SportsSavvy";
@@ -32,17 +33,27 @@ const WebPortfolio = () => {
     setSite("slingair");
   };
 
+  const handleFalse = (event) => {
+    setSite(false);
+  };
+
   return (
     <>
       <Wrapper className={visible ? "fade-in" : ""}>
         <LeftColumn>
-          <H1>Web Portfolio</H1>
-          <h2 onClick={handlePortfolio}>Personal Portfolio</h2>
-          <h2 onClick={handleSuoni}>Suoni Per Il Popolo Archive</h2>
-          <h2 onClick={handleSportsSavvy}>Faux e-Commerce Website</h2>
-          {/* <h2 onClick={handleSlingAir}>SlingAir (reservation website)</h2> */}
+          <H1 onClick={handleFalse}>WEB PORTFOLIO</H1>
+          <H2 onClick={handlePortfolio}>Personal Portfolio</H2>
+          <H2 onClick={handleSuoni}>Suoni Per Il Popolo Archive</H2>
+          <H2 onClick={handleSportsSavvy}>Faux e-Commerce Website</H2>
+          {/* <H2 onClick={handleSlingAir}>SlingAir (reservation website)</H2> */}
         </LeftColumn>
         <RightColumn>
+          {!site && (
+            <Img
+              src="/images/vhsguy-ufo-01.png"
+              alt='"VHS UFO Guy" by Jennifer Brunet'
+            />
+          )}
           {site === "portfolio" && <PersonalPortfolio />}
           {site === "suoni" && <Suoni />}
           {site === "sportssavvy" && <SportsSavvy />}
@@ -69,8 +80,37 @@ const LeftColumn = styled.div`
 
 const H1 = styled.h1`
   font-size: 3em;
+  margin-top: 1.7em;
+  transform: scale(1, 3);
+  -webkit-transform: scale(1, 3);
+  -moz-transform: scale(1, 3);
+  -o-transform: scale(1, 3);
+  transform-origin: 0% 70%;
+`;
+
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
+`;
+
+const H2 = styled.h2`
+  &:hover {
+    color: red;
+  }
+  &:active {
+    color: darkred;
+  }
+  cursor: pointer;
 `;
 
 const RightColumn = styled.div``;
+
+const Img = styled.img`
+  height: 50%;
+  margin-left: 30%;
+`;
 
 export default WebPortfolio;
