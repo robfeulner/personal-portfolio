@@ -32,7 +32,7 @@ const Home = () => {
             like-minded artists through DVD and VHS home releases.
           </BioSpan>
         </BioDiv> */}
-        <BioDiv/>
+        <BioDiv />
         <SecondRow>
           {/* <ImgRow> */}
           <ImgPress
@@ -52,13 +52,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  width: 100%;
   &.fade-in {
     opacity: 1;
   }
 `;
-// const BioDiv = styled.div`
-//   max-width: 70%;
-// `;
 
 const BioSpan = styled.span`
   font-size: 1.25em;
@@ -68,6 +66,12 @@ const SecondRow = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 2%;
+  gap: 2vh;
+  @media screen and (max-width: 768px) {
+    margin-top: 15%;
+    flex-direction: column;
+    width: 175vw;
+  }
 `;
 
 const ImgRow = styled.div``;
@@ -75,6 +79,11 @@ const ImgRow = styled.div``;
 const ImgPress = styled.img`
   max-width: 50%;
   margin-right: 5%;
+  gap: 2vh;
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    margin: auto;
+  }
 `;
 
 export default Home;

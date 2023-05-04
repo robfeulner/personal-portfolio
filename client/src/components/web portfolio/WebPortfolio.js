@@ -42,10 +42,11 @@ const WebPortfolio = () => {
       <Wrapper className={visible ? "fade-in" : ""}>
         <LeftColumn>
           <H1 onClick={handleFalse}>WEB PORTFOLIO</H1>
-          <H2 onClick={handlePortfolio}>Personal Portfolio</H2>
-          <H2 onClick={handleSuoni}>Suoni Per Il Popolo Archive</H2>
-          <H2 onClick={handleSportsSavvy}>Faux e-Commerce Website</H2>
-          {/* <H2 onClick={handleSlingAir}>SlingAir (reservation website)</H2> */}
+          <LinkDiv>
+            <H2 onClick={handlePortfolio}>Personal Portfolio</H2>
+            <H2 onClick={handleSuoni}>Suoni Per Il Popolo Archive</H2>
+            <H2 onClick={handleSportsSavvy}>Faux e-Commerce Website</H2>
+          </LinkDiv>
         </LeftColumn>
         <RightColumn>
           {!site && (
@@ -70,12 +71,25 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
+  @media screen and (max-width: 768px) {
+    gap: 10%;
+    flex-direction: column;
+    flex-wrap: wrap; /* add this line */
+    justify-content: space-between; /* add this line */
+  }
 `;
 
 const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 30%;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    min-width: 80%;
+    gap: 5%;
+    align-items: center;
+    justify-content: flex-start;
+  }
 `;
 
 const H1 = styled.h1`
@@ -86,13 +100,22 @@ const H1 = styled.h1`
   -moz-transform: scale(1, 3);
   -o-transform: scale(1, 3);
   transform-origin: 0% 70%;
+  @media screen and (max-width: 768px) {
+    font-size: 2.5em;
+    margin: 0;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform-origin: none;
+  }
 `;
 
-const StyledLink = styled(Link)`
-  color: black;
-  text-decoration: none;
-  &:visited {
-    color: black;
+const LinkDiv = styled.div`
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
   }
 `;
 
@@ -104,13 +127,27 @@ const H2 = styled.h2`
     color: darkred;
   }
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    font-size: 1.5em;
+  }
 `;
 
-const RightColumn = styled.div``;
+const RightColumn = styled.div`
+  flex: 1;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28%;
+    width: 100%;
+  }
+`;
 
 const Img = styled.img`
   height: 50%;
   margin-left: 30%;
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export default WebPortfolio;

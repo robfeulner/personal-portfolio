@@ -93,6 +93,10 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 175vw;
+  }
 `;
 
 const LeftRow = styled.div`
@@ -120,6 +124,17 @@ const H1 = styled.h1`
   -moz-transform: scale(1, 2);
   -o-transform: scale(1, 2);
   transform-origin: 0% 70%;
+  @media screen and (max-width: 768px) {
+    font-size: 4em;
+    margin-top: 1em;
+    margin-bottom: 0;
+
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform-origin: none;
+  }
 `;
 
 const PBold = styled.p`

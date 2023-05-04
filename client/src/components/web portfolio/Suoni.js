@@ -51,7 +51,7 @@ const Suoni = () => {
         </p>
 
         <p>
-          The website was created using MERN (MongoDB, Express React, Node). A
+          The website was created using MERN (MongoDB, Express, React, Node). A
           couple of APIs were used: Auth0 to log in to leave comments, and
           TinyMCE for an interactive rich-text editor.
         </p>
@@ -72,6 +72,9 @@ const Wrapper = styled.div`
   transition: opacity 0.5s ease-in-out;
   &.fade-in {
     opacity: 1;
+  }
+  @media screen and (max-width: 768px) {
+    width: 80vh;
   }
 `;
 

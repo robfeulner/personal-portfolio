@@ -149,6 +149,10 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
+  @media screen and (max-width: 768px) {
+    width: 80vh;
+    flex-direction: column;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -170,10 +174,18 @@ const ArtDiv = styled.div`
   &:hover img {
     transform: zoom(1.1);
   }
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    flex: auto;
+    margin: auto;
+  }
 `;
 
 const Img = styled.img`
   border-radius: 5%;
+  @media screen and (max-width: 768px) {
+    width: 120%;
+  }
 `;
 
 const TextDiv = styled.div`

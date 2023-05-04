@@ -17,6 +17,9 @@ const GlobalStyles = createGlobalStyle`
     body{
         margin: 2% 5%;
         background-color: #d1fffc;
+        @media screen and (max-width: 768px){
+            margin: 2% 10%;
+        }
     }
     
     p{

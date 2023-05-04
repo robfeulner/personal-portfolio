@@ -127,6 +127,10 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 175vw;
+  }
 `;
 
 const LeftRow = styled.div`

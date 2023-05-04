@@ -47,6 +47,15 @@ const SportsSavvy = () => {
           For a more illustrative description, please watch my presentation
           video below!
         </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/zUm3yX_joK4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </Wrapper>
     </>
   );
@@ -57,6 +66,9 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
+  @media screen and (max-width: 768px){
+    width: 80vh;
+  }
 `;
 
 const Img = styled.img`
@@ -66,6 +78,9 @@ const Img = styled.img`
 const Img2 = styled.img`
   height: 70%;
   margin-bottom: 0;
+  @media screen and (max-width: 768px){
+    height: 20em;
+  }
 `;
 
 const H2 = styled.h2`

@@ -65,6 +65,10 @@ const WrapperDismiss = styled.div`
   &.dismiss-class {
     /* add styles to your WrapperDismiss component */
   }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin: auto;
+  }
 `;
 
 const Img = styled.img`
@@ -90,6 +94,9 @@ const Dismiss = styled.span`
     color: white;
   }
   &.dismiss-class {
+  }
+  @media screen and (max-width: 768px) {
+    top: 30%;
   }
 `;
 

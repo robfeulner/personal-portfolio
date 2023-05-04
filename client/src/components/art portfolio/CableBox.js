@@ -226,11 +226,18 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 175vw;
+  }
 `;
 
 const LeftRow = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Info = styled.div`
@@ -253,6 +260,17 @@ const H1 = styled.h1`
   -moz-transform: scale(1, 3);
   -o-transform: scale(1, 3);
   transform-origin: 0% 70%;
+  @media screen and (max-width: 768px) {
+    font-size: 4em;
+    margin-top: 1em;
+    margin-bottom: 0;
+
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform-origin: none;
+  }
 `;
 
 const PBold = styled.p`
@@ -265,6 +283,9 @@ const RightRow = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -303,6 +324,9 @@ const ImgPoster = styled.img``;
 const Iframe = styled.iframe`
   margin-top: 10px;
   /* width: 80%; */
+@media screen and (max-width: 768px) {
+  width: 100%;
+}
 `;
 
 export default CableBox;

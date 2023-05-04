@@ -52,12 +52,21 @@ const Header = () => {
 
 const Wrapper = styled.div`
   display: flex;
-
+  flex-wrap: wrap;
   align-items: center;
   /* justify-content: space-between; */
   align-items: flex-end;
   margin-bottom: 5%;
   gap: 5%;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+  }
 `;
 
 const NameDiv = styled.div`
@@ -68,33 +77,60 @@ const NameDiv = styled.div`
     background-size: contain;
   }
   /* transition: all 0.3s ease-in-out; */
+  /* gap: 2vh; */
+  @media screen and (max-width: 768px) {
+    background: none;
+    width: 25%;
+    order: 1;
+  }
 `;
 
 const H1 = styled.h1`
   font-size: 5em;
   margin: 0;
+  @media screen and (max-width: 768px) {
+    font-size: 3em;
+    margin: 0;
+  }
 `;
 
 const TextAndIconsDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
-  gap: 15px;
+  gap: 2vh;
+  @media screen and (max-width: 768px) {
+    width: -100%;
+    margin-top: 70%;
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+  }
 `;
 
 const LinksDiv = styled.div`
   display: flex;
-  gap: 10px;
+
   /* margin-bottom: 20px; */
   justify-content: space-between;
+  gap: 2vh;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    /* align-items: center; */
+  }
 `;
 
 const IconsDiv = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 2em;
-  gap: 50px;
+  gap: 10%;
   justify-content: flex-end;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -116,10 +152,16 @@ const SpanLink = styled.span`
   font-size: 1.25em;
 `;
 
-const ImgDiv = styled.div``;
+const ImgDiv = styled.div`
+  margin: 0;
+  @media screen and (max-width: 768px) {
+    width: 25%;
+    order: 2;
+  }
+`;
 
 const Img = styled.img`
-  height: 150px;
+  height: 10em;
   margin: 0;
 `;
 

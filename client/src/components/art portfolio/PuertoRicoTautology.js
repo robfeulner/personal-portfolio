@@ -159,6 +159,10 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 175vw;
+  }
 `;
 
 const LeftRow = styled.div`
@@ -224,7 +228,11 @@ const BoldSpan = styled.span`
   font-weight: bold;
 `;
 
-const ImgPoster = styled.img``;
+const ImgPoster = styled.img`
+  @media screen and (max-width: 768px) {
+    width: 175vw;
+  }
+`;
 
 const Iframe = styled.iframe`
   margin-top: 10px;
