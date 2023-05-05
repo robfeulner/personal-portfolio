@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import GlobalStyles from "./components/global/GlobalStyles";
 import Header from "./components/header and footer/Header";
+import HeaderMobile from "./components/header and footer/HeaderMobile";
 import Home from "./components/home/Home";
 import ArtPortfolio from "./components/art portfolio/ArtPortfolio";
 import WebPortfolio from "./components/web portfolio/WebPortfolio";
@@ -17,12 +18,24 @@ import ManAndHisProgress from "./components/art portfolio/ManAndHisProgress";
 import PuertoRicoTautology from "./components/art portfolio/PuertoRicoTautology";
 
 const App = () => {
+  const [isMobile, setIsMobile] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <BrowserRouter>
       <GlobalStyles />
       {/* <Wrapper> */}
       <div>
-        <Header />
+        {/* {isMobile ? <HeaderMobile /> : <Header />} */}
+        <HeaderMobile/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/art-portfolio" element={<ArtPortfolio />} />

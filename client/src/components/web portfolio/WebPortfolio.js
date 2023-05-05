@@ -115,7 +115,7 @@ const LinkDiv = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: row;
-    gap: 30%;
+    gap: 10%;
   }
 `;
 
