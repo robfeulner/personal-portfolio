@@ -23,7 +23,9 @@ function VideoArt() {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = videoart.videoart.filter((item) => videoart.videoart.indexOf(item) === newIndex);
+    const newLink = videoart.videoart.filter(
+      (item) => videoart.videoart.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -37,7 +39,9 @@ function VideoArt() {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = videoart.videoart.filter((item) => videoart.videoart.indexOf(item) === newIndex);
+    const newLink = videoart.videoart.filter(
+      (item) => videoart.videoart.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -60,10 +64,9 @@ function VideoArt() {
         </Info>
         <Details>
           <p>
-            Produced between 2016 and 2017, "Video Art for Conditional
-            Malaise" is a tool intended for those suffering from bouts of
-            seasonal depression or general malaise in our modern political
-            climate.
+            Produced between 2016 and 2017, "Video Art for Conditional Malaise"
+            is a tool intended for those suffering from bouts of seasonal
+            depression or general malaise in our modern political climate.
           </p>
 
           <p>
@@ -74,9 +77,9 @@ function VideoArt() {
             goal is full immersion.
           </p>
           <p>
-            Premiere public screening occurred at Newfields Indianapolis
-            Museum of Art in April 2018. A live variation of the piece was
-            performed with Billy Gomberg in Brooklyn, NY in April 2017.
+            Premiere public screening occurred at Newfields Indianapolis Museum
+            of Art in April 2018. A live variation of the piece was performed
+            with Billy Gomberg in Brooklyn, NY in April 2017.
           </p>
           <StyledLink
             to="https://bleunuitvideo.bandcamp.com/album/video-art-for-conditional-malaise"
@@ -98,12 +101,12 @@ function VideoArt() {
           ))}
         </ImageDiv>
         {clickedImage && (
-        <ImageModal
-          clickedImage={clickedImage}
-          handleRotationRight={handleRotationRight}
-          handleRotationLeft={handleRotationLeft}
-          setClickedImage={setClickedImage}
-        />
+          <ImageModal
+            clickedImage={clickedImage}
+            handleRotationRight={handleRotationRight}
+            handleRotationLeft={handleRotationLeft}
+            setClickedImage={setClickedImage}
+          />
         )}
       </LeftRow>
       <RightRow>

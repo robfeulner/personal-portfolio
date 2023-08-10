@@ -36,15 +36,14 @@ function PivotForwardCollapse() {
           </p>
           <p>
             The piece was created through analog video machinery: a VCR and a
-            video mixer running internal video feedback. The point of no
-            return for the skater mirrors that of the VHS medium used. As the
-            image of skater folds, there is increasingly little use for the
-            VHS tape. It’s image quality corrupts and distorts, unable to
-            compete with digital archiving and the vast superior quality of
-            modern codecs. Once it collapses into the void, the medium is
-            merely remembered as a relic of difficult times, at best a
-            fetishized piece of nostalgia for those who never interacted with
-            the medium itself.
+            video mixer running internal video feedback. The point of no return
+            for the skater mirrors that of the VHS medium used. As the image of
+            skater folds, there is increasingly little use for the VHS tape.
+            It’s image quality corrupts and distorts, unable to compete with
+            digital archiving and the vast superior quality of modern codecs.
+            Once it collapses into the void, the medium is merely remembered as
+            a relic of difficult times, at best a fetishized piece of nostalgia
+            for those who never interacted with the medium itself.
           </p>
 
           <p>
@@ -55,19 +54,15 @@ function PivotForwardCollapse() {
 
         <PBold>SCREENINGS</PBold>
         <CreditLine>
-          <BoldSpan>SATURATE(D) (early cut, installation)</BoldSpan>
-          .
-          Portland, OR (USA) . April/May 2018
+          <BoldSpan>SATURATE(D) (early cut, installation)</BoldSpan>. Portland,
+          OR (USA) . April/May 2018
         </CreditLine>
         <CreditLine>
-          <BoldSpan>Correspondance/Correspondence (Vidégraphe)</BoldSpan>
-          .
+          <BoldSpan>Correspondance/Correspondence (Vidégraphe)</BoldSpan>.
           Montréal, QC (Canada) . Oct 2020
         </CreditLine>
         <CreditLine>
-          <BoldSpan>Le Guess Who? (LGW ON)</BoldSpan>
-          {" "}
-          . Utrecht, Netherlands .
+          <BoldSpan>Le Guess Who? (LGW ON)</BoldSpan> . Utrecht, Netherlands .
           Nov 2020
         </CreditLine>
       </LeftRow>

@@ -24,7 +24,7 @@ function CableBox() {
     }
     const newIndex = currentIndex + 1;
     const newLink = cablebox.cablebox.filter(
-      (item) => cablebox.cablebox.indexOf(item) === newIndex
+      (item) => cablebox.cablebox.indexOf(item) === newIndex,
     );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
@@ -40,7 +40,7 @@ function CableBox() {
       newIndex = currentIndex - 1;
     }
     const newLink = cablebox.cablebox.filter(
-      (item) => cablebox.cablebox.indexOf(item) === newIndex
+      (item) => cablebox.cablebox.indexOf(item) === newIndex,
     );
     const newItem = newLink[0].link;
     setClickedImage(newItem);

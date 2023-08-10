@@ -23,7 +23,9 @@ function Carmen() {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = carmen.carmen.filter((item) => carmen.carmen.indexOf(item) === newIndex);
+    const newLink = carmen.carmen.filter(
+      (item) => carmen.carmen.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -37,7 +39,9 @@ function Carmen() {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = carmen.carmen.filter((item) => carmen.carmen.indexOf(item) === newIndex);
+    const newLink = carmen.carmen.filter(
+      (item) => carmen.carmen.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -93,12 +97,12 @@ function Carmen() {
           ))}
         </ImageDiv>
         {clickedImage && (
-        <ImageModal
-          clickedImage={clickedImage}
-          handleRotationRight={handleRotationRight}
-          handleRotationLeft={handleRotationLeft}
-          setClickedImage={setClickedImage}
-        />
+          <ImageModal
+            clickedImage={clickedImage}
+            handleRotationRight={handleRotationRight}
+            handleRotationLeft={handleRotationLeft}
+            setClickedImage={setClickedImage}
+          />
         )}
       </LeftRow>
       <RightRow>

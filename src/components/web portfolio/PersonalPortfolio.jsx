@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     width: 80vh;
   }
 `;

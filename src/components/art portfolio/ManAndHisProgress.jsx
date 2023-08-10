@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import offtheair from "./images.json";
 
-
 function ManAndHisProgress() {
   const [visible, setVisible] = useState(false);
   const [clickedImage, setClickedImage] = useState(null);
@@ -23,7 +22,9 @@ function ManAndHisProgress() {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
+    const newLink = offtheair.offtheair.filter(
+      (item) => offtheair.offtheair.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -37,7 +38,9 @@ function ManAndHisProgress() {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
+    const newLink = offtheair.offtheair.filter(
+      (item) => offtheair.offtheair.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -86,19 +89,13 @@ function ManAndHisProgress() {
           <PBold>CREDITS</PBold>
           <Credits>
             <CreditLine>
-              <BoldSpan>Voice #1:</BoldSpan>
-              {" "}
-              Maica Armata-Boles
+              <BoldSpan>Voice #1:</BoldSpan> Maica Armata-Boles
             </CreditLine>
             <CreditLine>
-              <BoldSpan>Voice #2:</BoldSpan>
-              {" "}
-              Matt Smith
+              <BoldSpan>Voice #2:</BoldSpan> Matt Smith
             </CreditLine>
             <CreditLine>
-              <BoldSpan>Script Translation:</BoldSpan>
-              {" "}
-              Samuel Bonneau
+              <BoldSpan>Script Translation:</BoldSpan> Samuel Bonneau
             </CreditLine>
           </Credits>
         </LeftRow>

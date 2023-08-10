@@ -43,8 +43,7 @@ function Bio() {
           <p>2023</p>
           <h3>Bachelor of Fine Arts - Film Studies</h3>
           <p>
-            Mel Hoppenheim School of Cinema, Concordia University, Montreal,
-            QC
+            Mel Hoppenheim School of Cinema, Concordia University, Montreal, QC
           </p>
           <p>2007 - 2011</p>
           <h3>DEC - Cinema Communications</h3>
@@ -69,14 +68,12 @@ function Bio() {
           <p>Director, Editor, and Sound Designer</p>
           <p>Premiered at Le Guess Who? Festival (Netherlands) in 2020</p>
           <h3>
-            “Off the Air 5x04: NewNow (Analog Video Remix)” – 11MIN – HD –
-            2018
+            “Off the Air 5x04: NewNow (Analog Video Remix)” – 11MIN – HD – 2018
           </h3>
           <p>Director</p>
           <p>Produced by The Cartoon Network</p>
           <p>
-            Broadcast on The Cartoon Network television station and presented
-            on
+            Broadcast on The Cartoon Network television station and presented on
             <p />
             AdultSwim.com in 2018
           </p>
@@ -89,9 +86,7 @@ function Bio() {
             Presented as an audio/visual performance at Flux Factory (NYC)
             alongside Billy Gomberg in April 2017
           </p>
-          <p>
-            Premiered at Newfields Indianapolis Museum of Art in April 2018
-          </p>
+          <p>Premiered at Newfields Indianapolis Museum of Art in April 2018</p>
           <h3>"Puerto Rico Tautology" – 7MIN – SD – 2016</h3>
           <p>Director, Editor, Sound Designer, and Producer</p>
           <p>Distributed by Vidéographe</p>
@@ -127,8 +122,8 @@ function Bio() {
           <p>
             A multi-day seminar and hands-on workshop led by myself and
             colleague Guillaume Vallée held twice a year wherein students were
-            taught the basics of analog video glitch techniques and were able
-            to use circuit-bent processors otherwise unavailable to them.
+            taught the basics of analog video glitch techniques and were able to
+            use circuit-bent processors otherwise unavailable to them.
           </p>
           <h3>Analogue Glitch Workshop</h3>
           <p>April / May 2022</p>
@@ -152,7 +147,7 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     width: 175vw;
   }
 `;

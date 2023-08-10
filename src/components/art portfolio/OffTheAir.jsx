@@ -23,7 +23,9 @@ function OffTheAir() {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
+    const newLink = offtheair.offtheair.filter(
+      (item) => offtheair.offtheair.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -37,7 +39,9 @@ function OffTheAir() {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
+    const newLink = offtheair.offtheair.filter(
+      (item) => offtheair.offtheair.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -65,11 +69,10 @@ function OffTheAir() {
             late-night experimental anthology series, Off the Air. An older
             episode of the series was run through a series of VCRs and video
             manipulation devices, adding strobing feedback to the image and
-            pitched down warbles to the audio. The intent was to unearth a
-            once clean episode after decades of decay and damage. Suddenly the
-            Turner archives in Atlanta are no safer than one's childhood
-            flooded basement. Your old tapes play, but they will never be the
-            same.
+            pitched down warbles to the audio. The intent was to unearth a once
+            clean episode after decades of decay and damage. Suddenly the Turner
+            archives in Atlanta are no safer than one's childhood flooded
+            basement. Your old tapes play, but they will never be the same.
           </p>
 
           <p>
@@ -88,12 +91,12 @@ function OffTheAir() {
           ))}
         </ImageDiv>
         {clickedImage && (
-        <ImageModal
-          clickedImage={clickedImage}
-          handleRotationRight={handleRotationRight}
-          handleRotationLeft={handleRotationLeft}
-          setClickedImage={setClickedImage}
-        />
+          <ImageModal
+            clickedImage={clickedImage}
+            handleRotationRight={handleRotationRight}
+            handleRotationLeft={handleRotationLeft}
+            setClickedImage={setClickedImage}
+          />
         )}
       </LeftRow>
       <RightRow>

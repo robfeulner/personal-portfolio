@@ -22,7 +22,9 @@ function PuertoRicoTautology() {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = cablebox.cablebox.filter((item) => cablebox.cablebox.indexOf(item) === newIndex);
+    const newLink = cablebox.cablebox.filter(
+      (item) => cablebox.cablebox.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -36,7 +38,9 @@ function PuertoRicoTautology() {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = cablebox.cablebox.filter((item) => cablebox.cablebox.indexOf(item) === newIndex);
+    const newLink = cablebox.cablebox.filter(
+      (item) => cablebox.cablebox.indexOf(item) === newIndex,
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -53,44 +57,42 @@ function PuertoRicoTautology() {
   return (
     <Wrapper className={visible ? "fade-in" : ""}>
       <LeftRow>
-        <H1>PUERTO RICO TAUTOLOGY</H1>
-        {" "}
-        <H1>(14 dubs high)</H1>
+        <H1>PUERTO RICO TAUTOLOGY</H1> <H1>(14 dubs high)</H1>
         <Info>
           <PBold>Video (SD) . 2016 . 16:45</PBold>
           <PBold>Distributed by Vidéographe</PBold>
         </Info>
         <Details>
           <p>
-            Found footage of Puerto Rican families celebrating in the street
-            to the music of the Fania All-Stars. The clip, recorded on VHS, is
+            Found footage of Puerto Rican families celebrating in the street to
+            the music of the Fania All-Stars. The clip, recorded on VHS, is
             repeatedly copied to VHS until the image disappears completely.
           </p>
           <p>
-            Images trouvées de familles portoricaines célébrant dans les rues
-            au son du groupe Fania All-Stars. La séquence, enregistrée sur
-            VHS, a été copiée sur VHS à répétition, jusqu’à sa disparition.
+            Images trouvées de familles portoricaines célébrant dans les rues au
+            son du groupe Fania All-Stars. La séquence, enregistrée sur VHS, a
+            été copiée sur VHS à répétition, jusqu’à sa disparition.
           </p>
 
           <p>
             Puerto Rico Tautology (14 dubs high) was recorded in 2015 and
             completed in early 2016. Found footage of Puerto Rican families
             celebrate in the street as the Fania All-Stars perform in the
-            background. The clip, recorded on VHS, is dubbed to another VHS
-            tape and played again. The image and sound gradually decay with
-            each dub, until the image breaks completely. Inspired by the mass
-            exodus of Puerto Ricans moving to Orlando, Florida, this piece is
-            an illustration of the economic degradation of Puerto Rico. As
-            with the video image, the island is losing its vibrancy and
-            colour, but more alarmingly Puerto Rico is being robbed of its
-            resources and standard of living through increasing debt of Wall
-            Street hedge funds. This is also represented through the audio, as
-            the crowd and the music are gradually distorted and difficult to
-            hear. Illinois House of Representatives member Luis Gutiérrez can
-            be heard over the VHS audio, pleading with Congress to allow
-            Puerto Rico to declare bankruptcy. As the distortion increases,
-            the house member's message becomes less clear, lost in the ether
-            of the ignored United States territory.
+            background. The clip, recorded on VHS, is dubbed to another VHS tape
+            and played again. The image and sound gradually decay with each dub,
+            until the image breaks completely. Inspired by the mass exodus of
+            Puerto Ricans moving to Orlando, Florida, this piece is an
+            illustration of the economic degradation of Puerto Rico. As with the
+            video image, the island is losing its vibrancy and colour, but more
+            alarmingly Puerto Rico is being robbed of its resources and standard
+            of living through increasing debt of Wall Street hedge funds. This
+            is also represented through the audio, as the crowd and the music
+            are gradually distorted and difficult to hear. Illinois House of
+            Representatives member Luis Gutiérrez can be heard over the VHS
+            audio, pleading with Congress to allow Puerto Rico to declare
+            bankruptcy. As the distortion increases, the house member's message
+            becomes less clear, lost in the ether of the ignored United States
+            territory.
           </p>
 
           <p>
@@ -103,36 +105,25 @@ function PuertoRicoTautology() {
           <CreditLine>
             <BoldSpan>
               International Film Festival ZOOM Zblizenia (premiere)
-            </BoldSpan>
-            {" "}
+            </BoldSpan>{" "}
             . Poland . 2016
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Jornadas de Reapropiación</BoldSpan>
-            . Mexico . 2016
+            <BoldSpan>Jornadas de Reapropiación</BoldSpan>. Mexico . 2016
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Rendez-vous du cinéma québécois</BoldSpan>
-            {" "}
-            . Canada .
-            2016
+            <BoldSpan>Rendez-vous du cinéma québécois</BoldSpan> . Canada . 2016
           </CreditLine>
           <CreditLine>
-            <BoldSpan>8th Cairo Video Festival</BoldSpan>
-            {" "}
-            . Egypt . 2016
+            <BoldSpan>8th Cairo Video Festival</BoldSpan> . Egypt . 2016
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Montreal Underground Film Festival</BoldSpan>
-            {" "}
-            . Canada .
+            <BoldSpan>Montreal Underground Film Festival</BoldSpan> . Canada .
             2017
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Marseille Underground Film Festival</BoldSpan>
-            {" "}
-            . France
-            . 2017
+            <BoldSpan>Marseille Underground Film Festival</BoldSpan> . France .
+            2017
           </CreditLine>
         </Credits>
         <iframe

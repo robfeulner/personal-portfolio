@@ -112,7 +112,7 @@ function ArtPortfolio() {
     <Wrapper className={visible ? "fade-in" : ""}>
       {images.map((image, index) => (
         <ArtDiv
-          key={index}
+          key={image.src}
           onMouseOver={() => setHoverArt(index)}
           onMouseOut={() => setHoverArt(-1)}
         >

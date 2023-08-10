@@ -18,10 +18,7 @@ function Home() {
     <Wrapper className={visible ? "fade-in" : ""}>
       <BioDiv />
       <SecondRow>
-        <ImgPress
-          src="/images/robfeulner_press08-1200.jpg"
-          alt="Rob Feulner"
-        />
+        <ImgPress src="/images/robfeulner_press08-1200.jpg" alt="Rob Feulner" />
         <Updates />
       </SecondRow>
     </Wrapper>

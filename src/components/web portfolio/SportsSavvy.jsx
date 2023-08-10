@@ -25,12 +25,12 @@ function SportsSavvy() {
         <H2>View the GitHub repo</H2>
       </StyledLink>
       <p>
-        Developed as a group project for the Full Stack Web Development
-        bootcamp at Concordia University, SportsSavvy is an e-Commerce smart
-        watch website created with MERN (MongoDB, Express, React, and Node.)
-        Hundreds of items are stored on a private server, along with user data
-        and purchase history. Though completing an order won't result in
-        actually receiving a smart watch in the mail, it holds nearly all the
+        Developed as a group project for the Full Stack Web Development bootcamp
+        at Concordia University, SportsSavvy is an e-Commerce smart watch
+        website created with MERN (MongoDB, Express, React, and Node.) Hundreds
+        of items are stored on a private server, along with user data and
+        purchase history. Though completing an order won't result in actually
+        receiving a smart watch in the mail, it holds nearly all the
         funcionality involved in online shopping.
       </p>
       <Img2 src="images/web-portfolio/sportssavvy03.png" alt="Sports Savvy" />
@@ -38,13 +38,13 @@ function SportsSavvy() {
       <p>
         We had split the teams in two, with myself and a colleague focusing on
         the frontend and logic, and the other two team members focusing on the
-        backend, though we found ourselves helping with all aspects. The
-        website design was first sketched using Figma and daily tasks and
-        updates were tracked using a shared sheet and task software.
+        backend, though we found ourselves helping with all aspects. The website
+        design was first sketched using Figma and daily tasks and updates were
+        tracked using a shared sheet and task software.
       </p>
       <p>
-        For a more illustrative description, please watch my presentation
-        video below!
+        For a more illustrative description, please watch my presentation video
+        below!
       </p>
       <iframe
         width="560"
@@ -64,7 +64,7 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     width: 80vh;
   }
 `;
@@ -76,7 +76,7 @@ const Img = styled.img`
 const Img2 = styled.img`
   height: 70%;
   margin-bottom: 0;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     height: 20em;
   }
 `;
