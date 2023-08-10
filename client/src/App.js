@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import GlobalStyles from "./components/global/GlobalStyles";
 import Header from "./components/header and footer/Header";
 import HeaderMobile from "./components/header and footer/HeaderMobile";
@@ -18,24 +19,28 @@ import ManAndHisProgress from "./components/art portfolio/ManAndHisProgress";
 import PuertoRicoTautology from "./components/art portfolio/PuertoRicoTautology";
 
 const App = () => {
-  const [isMobile, setIsMobile] = useState(null);
+  // const [isMobile, setIsMobile] = useState(false);
+  // console.log(isMobile);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth < 768);
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   handleResize();
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <BrowserRouter>
+      <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Helmet>
       <GlobalStyles />
       {/* <Wrapper> */}
       <div>
         {/* {isMobile ? <HeaderMobile /> : <Header />} */}
-        <HeaderMobile/>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/art-portfolio" element={<ArtPortfolio />} />

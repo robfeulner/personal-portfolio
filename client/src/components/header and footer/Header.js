@@ -60,12 +60,10 @@ const Wrapper = styled.div`
   gap: 5%;
   @media screen and (max-width: 768px) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 40%;
+    gap: 5%;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 100%;
   }
 `;
 
@@ -80,8 +78,7 @@ const NameDiv = styled.div`
   /* gap: 2vh; */
   @media screen and (max-width: 768px) {
     background: none;
-    width: 25%;
-    order: 1;
+    order: 0;
   }
 `;
 
@@ -89,8 +86,8 @@ const H1 = styled.h1`
   font-size: 5em;
   margin: 0;
   @media screen and (max-width: 768px) {
-    font-size: 3em;
-    margin: 0;
+    font-size: 4em;
+    margin-top: 10%;
   }
 `;
 
@@ -100,13 +97,8 @@ const TextAndIconsDiv = styled.div`
   width: 40%;
   gap: 2vh;
   @media screen and (max-width: 768px) {
-    width: -100%;
-    margin-top: 70%;
-    
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    order: 3;
+    width: 100%;
   }
 `;
 
@@ -117,8 +109,7 @@ const LinksDiv = styled.div`
   justify-content: space-between;
   gap: 2vh;
   @media screen and (max-width: 768px) {
-    flex-direction: row;
-    /* align-items: center; */
+    order: 2;
   }
 `;
 
@@ -130,6 +121,8 @@ const IconsDiv = styled.div`
   justify-content: flex-end;
   @media screen and (max-width: 768px) {
     flex-direction: row;
+    justify-content: space-between;
+    order: 3;
   }
 `;
 
@@ -156,7 +149,7 @@ const ImgDiv = styled.div`
   margin: 0;
   @media screen and (max-width: 768px) {
     width: 25%;
-    order: 2;
+    order: 1;
   }
 `;
 
