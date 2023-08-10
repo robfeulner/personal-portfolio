@@ -1,8 +1,7 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import cablebox from './images.json';
-import ImageModal from './ImageModal';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import cablebox from "./images.json";
 
 function PuertoRicoTautology() {
   const [visible, setVisible] = useState(false);
@@ -52,10 +51,10 @@ function PuertoRicoTautology() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <LeftRow>
         <H1>PUERTO RICO TAUTOLOGY</H1>
-        {' '}
+        {" "}
         <H1>(14 dubs high)</H1>
         <Info>
           <PBold>Video (SD) . 2016 . 16:45</PBold>
@@ -105,7 +104,7 @@ function PuertoRicoTautology() {
             <BoldSpan>
               International Film Festival ZOOM Zblizenia (premiere)
             </BoldSpan>
-            {' '}
+            {" "}
             . Poland . 2016
           </CreditLine>
           <CreditLine>
@@ -114,24 +113,24 @@ function PuertoRicoTautology() {
           </CreditLine>
           <CreditLine>
             <BoldSpan>Rendez-vous du cinéma québécois</BoldSpan>
-            {' '}
+            {" "}
             . Canada .
             2016
           </CreditLine>
           <CreditLine>
             <BoldSpan>8th Cairo Video Festival</BoldSpan>
-            {' '}
+            {" "}
             . Egypt . 2016
           </CreditLine>
           <CreditLine>
             <BoldSpan>Montreal Underground Film Festival</BoldSpan>
-            {' '}
+            {" "}
             . Canada .
             2017
           </CreditLine>
           <CreditLine>
             <BoldSpan>Marseille Underground Film Festival</BoldSpan>
-            {' '}
+            {" "}
             . France
             . 2017
           </CreditLine>

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function PivotForwardCollapse() {
   const [visible, setVisible] = useState(false);
@@ -14,7 +14,7 @@ function PivotForwardCollapse() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <LeftRow>
         <H1>PIVOT, FORWARD, COLLAPSE</H1>
         <Info>
@@ -66,7 +66,7 @@ function PivotForwardCollapse() {
         </CreditLine>
         <CreditLine>
           <BoldSpan>Le Guess Who? (LGW ON)</BoldSpan>
-          {' '}
+          {" "}
           . Utrecht, Netherlands .
           Nov 2020
         </CreditLine>

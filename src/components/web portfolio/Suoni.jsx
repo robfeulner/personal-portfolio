@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 function Suoni() {
   const [visible, setVisible] = useState(false);
@@ -14,7 +14,7 @@ function Suoni() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <h1>Suoni Per Il Popolo Archive</h1>
       <Img
         src="images/web-portfolio/suoni-site.jpg"
@@ -35,9 +35,8 @@ function Suoni() {
       <p>
         Located in Montreal, Quebec, Suoni Per Il Popolo has been a leading
         festival of the avant-garde arts since the year 2000. Every June the
-        festival showcases underground experimental performers from genres
-        such as free jazz, noise, drone, avant-folk, art-rock, electronics,
-        and more.
+        festival showcases underground experimental performers from genres such
+        as free jazz, noise, drone, avant-folk, art-rock, electronics, and more.
       </p>
 
       <p>
@@ -45,14 +44,14 @@ function Suoni() {
         2021, but all the events for the 21 years prior remain a mystery. As
         such, I created a searchable database of all performers and events for
         the Suoni Per Il Popolo festival. The data has been manually entered
-        through old festival programmes, and I will continue to update the
-        site as more programmes and data sets become available to me.
+        through old festival programmes, and I will continue to update the site
+        as more programmes and data sets become available to me.
       </p>
 
       <p>
         The website was created using MERN (MongoDB, Express, React, Node). A
-        couple of APIs were used: Auth0 to log in to leave comments, and
-        TinyMCE for an interactive rich-text editor.
+        couple of APIs were used: Auth0 to log in to leave comments, and TinyMCE
+        for an interactive rich-text editor.
       </p>
 
       <p>

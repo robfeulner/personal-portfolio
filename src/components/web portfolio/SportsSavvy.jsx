@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function SportsSavvy() {
   const [visible, setVisible] = useState(false);
@@ -14,7 +14,7 @@ function SportsSavvy() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <h1>SportsSavvy</h1>
       <h2>e-Commerce Group Project</h2>
       <Img src="images/web-portfolio/sportssavvy02.png" alt="Sports Savvy" />

@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
 function ImageModal({
   clickedImage,
@@ -18,7 +18,7 @@ function ImageModal({
   }, []);
 
   const handleClick = (event) => {
-    if (event.target.classList.contains('dismiss-class')) {
+    if (event.target.classList.contains("dismiss-class")) {
       setClickedImage(null);
     }
   };
@@ -26,13 +26,9 @@ function ImageModal({
   return (
     <WrapperDismiss
       onClick={handleClick}
-      className={`dismiss-class ${visible ? 'fade-in' : ''}`}
+      className={`dismiss-class ${visible ? "fade-in" : ""}`}
     >
-      <Img
-        src={clickedImage}
-        alt="TBD"
-        className={visible ? 'fade-in' : ''}
-      />
+      <Img src={clickedImage} alt="TBD" className={visible ? "fade-in" : ""} />
       <Dismiss onClick={handleClick} className="dismiss-class">
         X
       </Dismiss>

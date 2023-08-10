@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import Updates from './Updates';
-import BioDiv from '../bio/BioDiv';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import Updates from "./Updates";
+import BioDiv from "../bio/BioDiv";
 
 function Home() {
   const [visible, setVisible] = useState(false);
@@ -15,7 +15,7 @@ function Home() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <BioDiv />
       <SecondRow>
         <ImgPress

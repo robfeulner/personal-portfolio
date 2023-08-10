@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function PersonalPortfolio() {
   const [visible, setVisible] = useState(false);
@@ -13,7 +13,7 @@ function PersonalPortfolio() {
     return () => clearTimeout(timeoutId);
   }, []);
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <h1>Personal Portfolio</h1>
       <p>
         This is the very site you're visiting now! No YouTube or tour needed,

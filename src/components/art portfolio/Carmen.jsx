@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import carmen from './images.json';
-import ImageModal from './ImageModal';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import carmen from "./images.json";
+import ImageModal from "./ImageModal";
 
 function Carmen() {
   const [visible, setVisible] = useState(false);
@@ -52,7 +52,7 @@ function Carmen() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <LeftRow>
         <H1>CARMEN</H1>
         <Info>

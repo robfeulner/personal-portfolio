@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import cablebox from './images.json';
-import ImageModal from './ImageModal';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import cablebox from "./images.json";
+import ImageModal from "./ImageModal";
 
 function CableBox() {
   const [visible, setVisible] = useState(false);
@@ -23,7 +23,9 @@ function CableBox() {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = cablebox.cablebox.filter((item) => cablebox.cablebox.indexOf(item) === newIndex);
+    const newLink = cablebox.cablebox.filter(
+      (item) => cablebox.cablebox.indexOf(item) === newIndex
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -37,7 +39,9 @@ function CableBox() {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = cablebox.cablebox.filter((item) => cablebox.cablebox.indexOf(item) === newIndex);
+    const newLink = cablebox.cablebox.filter(
+      (item) => cablebox.cablebox.indexOf(item) === newIndex
+    );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -52,7 +56,7 @@ function CableBox() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <LeftRow>
         <H1>CABLE BOX</H1>
         <Info>
@@ -70,13 +74,12 @@ function CableBox() {
             luminance keying dominate stations one by one. Abstract imagery
             through analog video glitch techniques forewarn the passive
             television viewer that the far-right American political system to
-            come will not be the result of a sudden shift. Instead we will see
-            a rise of increasingly conservative policies followed by a
-            moulding of public perception by broadcast television. As Cable
-            Box progresses, commercials, sitcoms, and nightly news segments
-            begin to highlight the true nature of broadcast television: to
-            serve the financial and neoliberal interests of media
-            conglomerates.
+            come will not be the result of a sudden shift. Instead we will see a
+            rise of increasingly conservative policies followed by a moulding of
+            public perception by broadcast television. As Cable Box progresses,
+            commercials, sitcoms, and nightly news segments begin to highlight
+            the true nature of broadcast television: to serve the financial and
+            neoliberal interests of media conglomerates.
           </p>
 
           <p>
@@ -84,26 +87,23 @@ function CableBox() {
             Cable Box is faithful to the video-art tradition of turning the
             analog television signal against itself. Like Nam June Paik and
             Richard Serra before him, director Rob Feulner (b. 1987) uses
-            broadcast television tools to demonstrate that the television
-            signal controls society for an elite agenda while creating
-            thematic links to our current Internet landscape.
+            broadcast television tools to demonstrate that the television signal
+            controls society for an elite agenda while creating thematic links
+            to our current Internet landscape.
           </p>
 
           <p>
             Under non-exclusive distribution with Vidéographe. For screening
             consideration please email info [at] bleunuitvideo [dot] com. I'm
             also very interested in public access television broadcasts, and
-            have developed a 28-minute program which includes films by
-            {' '}
+            have developed a 28-minute program which includes films by{" "}
             <StyledLink
               to="https://palomakop.tv/works/magnetic-field-recordings/"
               target="_blank"
             >
               Paloma Kop
-            </StyledLink>
-            {' '}
-            and
-            {' '}
+            </StyledLink>{" "}
+            and{" "}
             <StyledLink
               to="https://www.charlotteclermont.com/pages/lucina-annulata"
               target="_blank"
@@ -124,101 +124,72 @@ function CableBox() {
           ))}
         </ImageDiv>
         {clickedImage && (
-        <ImageModal
-          clickedImage={clickedImage}
-          handleRotationRight={handleRotationRight}
-          handleRotationLeft={handleRotationLeft}
-          setClickedImage={setClickedImage}
-        />
+          <ImageModal
+            clickedImage={clickedImage}
+            handleRotationRight={handleRotationRight}
+            handleRotationLeft={handleRotationLeft}
+            setClickedImage={setClickedImage}
+          />
         )}
         <PBold>CREDITS</PBold>
         <Credits>
           <CreditLine>
-            <BoldSpan>Director:</BoldSpan>
-            {' '}
-            Rob Feulner
+            <BoldSpan>Director:</BoldSpan> Rob Feulner
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Writer:</BoldSpan>
-            {' '}
-            Rob Feulner
+            <BoldSpan>Writer:</BoldSpan> Rob Feulner
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Editor:</BoldSpan>
-            {' '}
-            Rob Feulner
+            <BoldSpan>Editor:</BoldSpan> Rob Feulner
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Producer:</BoldSpan>
-            {' '}
-            Max Séguéla
+            <BoldSpan>Producer:</BoldSpan> Max Séguéla
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Musical Score:</BoldSpan>
-            {' '}
-            Nick Maturo
+            <BoldSpan>Musical Score:</BoldSpan> Nick Maturo
           </CreditLine>
 
           <CreditLine>
-            <BoldSpan>Sound Designer:</BoldSpan>
-            {' '}
-            Sacha Ratcliffe
+            <BoldSpan>Sound Designer:</BoldSpan> Sacha Ratcliffe
           </CreditLine>
 
           <CreditLine>
-            <BoldSpan>Sound Mixer:</BoldSpan>
-            {' '}
-            Bernard Gariépy Strobl
+            <BoldSpan>Sound Mixer:</BoldSpan> Bernard Gariépy Strobl
           </CreditLine>
 
           <CreditLine>
-            <BoldSpan>Post-Production Supervisors:</BoldSpan>
-            {' '}
-            Bertrand
-            Paquette & Simon Allard
+            <BoldSpan>Post-Production Supervisors:</BoldSpan> Bertrand Paquette
+            & Simon Allard
           </CreditLine>
 
           <CreditLine>
-            <BoldSpan>Online Editor:</BoldSpan>
-            {' '}
-            Hugo Mazo
+            <BoldSpan>Online Editor:</BoldSpan> Hugo Mazo
           </CreditLine>
 
           <CreditLine>
-            <BoldSpan>Color Corrector:</BoldSpan>
-            {' '}
-            Martin Gaumond
+            <BoldSpan>Color Corrector:</BoldSpan> Martin Gaumond
           </CreditLine>
           <CreditLine>
-            <BoldSpan>Poster Design:</BoldSpan>
-            {' '}
-            Paloma Kop
+            <BoldSpan>Poster Design:</BoldSpan> Paloma Kop
           </CreditLine>
         </Credits>
 
         <PBold>SCREENINGS</PBold>
         <CreditLine>
-          <BoldSpan>Festival ECRÃ (world premiere)</BoldSpan>
-          . Rio de Janeiro
-          . July 2021
+          <BoldSpan>Festival ECRÃ (world premiere)</BoldSpan>. Rio de Janeiro .
+          July 2021
         </CreditLine>
         <CreditLine>
-          <BoldSpan>
-            Guangzhou International Documentary Film Festival
-          </BoldSpan>
+          <BoldSpan>Guangzhou International Documentary Film Festival</BoldSpan>
           . Guangzhou, China . Dec 2021
         </CreditLine>
         <CreditLine>
-          <BoldSpan>Cinema on the Bayou Film Festival</BoldSpan>
-          {' '}
-          . Louisiana,
+          <BoldSpan>Cinema on the Bayou Film Festival</BoldSpan> . Louisiana,
           USA . Jan 2022
         </CreditLine>
         <CreditLine>
-          <BoldSpan>Austin Public (television broadcast)</BoldSpan>
-          {' '}
-          . Texas,
-          USA . June 2022
+          <BoldSpan>Austin Public (television broadcast)</BoldSpan> . Texas, USA
+          . June 2022
         </CreditLine>
       </LeftRow>
       <RightRow>
@@ -348,9 +319,9 @@ const ImgPoster = styled.img``;
 const Iframe = styled.iframe`
   margin-top: 10px;
   /* width: 80%; */
-@media screen and (max-width: 768px) {
-  width: 100%;
-}
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export default CableBox;

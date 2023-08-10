@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import BioDiv from './BioDiv';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import BioDiv from "./BioDiv";
 
 function Bio() {
   const [visible, setVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(null);
   const email = isHovered
-    ? 'S̷e̴n̶d̷ ̴m̷e̷ ̸a̵n̷ ̷e̴m̸a̷i̵l̴ ̴a̷t̴ ̷i̴n̴f̶o̸ ̶[̸@̴]̶ ̸b̶l̶e̴u̸n̸u̴i̸t̴v̵i̸d̷e̴o̸ ̸[̸d̸o̴t̶]̴ ̵c̷o̵m̵'
-    : 'Send me an email at info [@̴̡̨̘͕̀̄̈̅] bleunuitvideo [ḓ̸͓̥̪͆̀͂̕o̸͇̬̗̫͆́̕ṯ̶̣͋́͊̕] com';
-  const transition = 'color 0.2s ease-in-out';
+    ? "S̷e̴n̶d̷ ̴m̷e̷ ̸a̵n̷ ̷e̴m̸a̷i̵l̴ ̴a̷t̴ ̷i̴n̴f̶o̸ ̶[̸@̴]̶ ̸b̶l̶e̴u̸n̸u̴i̸t̴v̵i̸d̷e̴o̸ ̸[̸d̸o̴t̶]̴ ̵c̷o̵m̵"
+    : "Send me an email at info [@̴̡̨̘͕̀̄̈̅] bleunuitvideo [ḓ̸͓̥̪͆̀͂̕o̸͇̬̗̫͆́̕ṯ̶̣͋́͊̕] com";
+  const transition = "color 0.2s ease-in-out";
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -19,7 +19,7 @@ function Bio() {
     return () => clearTimeout(timeoutId);
   }, []);
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <BioDiv />
       <LinkDiv>
         <StyledLink to="mailto:info@bleunuitvideo.com">

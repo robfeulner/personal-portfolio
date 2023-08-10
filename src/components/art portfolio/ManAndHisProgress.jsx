@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import offtheair from './images.json';
-import ImageModal from './ImageModal';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import offtheair from "./images.json";
+
 
 function ManAndHisProgress() {
   const [visible, setVisible] = useState(false);
@@ -53,7 +53,7 @@ function ManAndHisProgress() {
 
   return (
     <>
-      <Wrapper className={visible ? 'fade-in' : ''}>
+      <Wrapper className={visible ? "fade-in" : ""}>
         <LeftRow>
           <H1>Man and His Progress</H1>
           <Info>
@@ -87,17 +87,17 @@ function ManAndHisProgress() {
           <Credits>
             <CreditLine>
               <BoldSpan>Voice #1:</BoldSpan>
-              {' '}
+              {" "}
               Maica Armata-Boles
             </CreditLine>
             <CreditLine>
               <BoldSpan>Voice #2:</BoldSpan>
-              {' '}
+              {" "}
               Matt Smith
             </CreditLine>
             <CreditLine>
               <BoldSpan>Script Translation:</BoldSpan>
-              {' '}
+              {" "}
               Samuel Bonneau
             </CreditLine>
           </Credits>

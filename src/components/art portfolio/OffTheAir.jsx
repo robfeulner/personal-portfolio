@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import videoart from './images.json';
-import ImageModal from './ImageModal';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import offtheair from "./images.json";
+import ImageModal from "./ImageModal";
 
-function VideoArt() {
+function OffTheAir() {
   const [visible, setVisible] = useState(false);
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -15,29 +15,29 @@ function VideoArt() {
   };
 
   const handleRotationRight = () => {
-    const totalLength = videoart.videoart.length;
+    const totalLength = offtheair.offtheair.length;
     if (currentIndex + 1 >= totalLength) {
       setCurrentIndex(0);
-      const newLink = videoart.videoart[0].link;
+      const newLink = offtheair.offtheair[0].link;
       setClickedImage(newLink);
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = videoart.videoart.filter((item) => videoart.videoart.indexOf(item) === newIndex);
+    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
   };
 
   const handleRotationLeft = () => {
-    const totalLength = videoart.videoart.length;
+    const totalLength = offtheair.offtheair.length;
     let newIndex;
     if (currentIndex === 0) {
       newIndex = totalLength - 1;
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = videoart.videoart.filter((item) => videoart.videoart.indexOf(item) === newIndex);
+    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -52,43 +52,33 @@ function VideoArt() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <LeftRow>
-        <H1>Video Art for Conditional Malaise</H1>
+        <H1>Off the Air episode 5x04 "NewNow (Analog Video Remix)"</H1>
         <Info>
-          <PBold>DVD / Performance / Installation . 2017 . 29:04</PBold>
+          <PBold>Television / Web Broadcast . 2018 . 11:51</PBold>
+          <PBold>Produced by The Cartoon Network / Adult Swim</PBold>
         </Info>
         <Details>
           <p>
-            Produced between 2016 and 2017, "Video Art for Conditional
-            Malaise" is a tool intended for those suffering from bouts of
-            seasonal depression or general malaise in our modern political
-            climate.
+            Adult Swim commissioned a "video remix" for an episode of their
+            late-night experimental anthology series, Off the Air. An older
+            episode of the series was run through a series of VCRs and video
+            manipulation devices, adding strobing feedback to the image and
+            pitched down warbles to the audio. The intent was to unearth a
+            once clean episode after decades of decay and damage. Suddenly the
+            Turner archives in Atlanta are no safer than one's childhood
+            flooded basement. Your old tapes play, but they will never be the
+            same.
           </p>
 
           <p>
-            For thirty minutes flowers bloom and float into video feedback
-            ether, set to the experimental-ambient music of Billy Gomberg. For
-            its intended effect, please view using a projector against a large
-            white wall, with the audio set to a louder than usual volume. The
-            goal is full immersion.
+            The episode can be viewed on YouTube, the Adult Swim website, and
+            scheduled airings on The Cartoon Network.
           </p>
-          <p>
-            Premiere public screening occurred at Newfields Indianapolis
-            Museum of Art in April 2018. A live variation of the piece was
-            performed with Billy Gomberg in Brooklyn, NY in April 2017.
-          </p>
-          <StyledLink
-            to="https://bleunuitvideo.bandcamp.com/album/video-art-for-conditional-malaise"
-            target="_blank"
-          >
-            <p>
-              <strong>DVD available through Bleu Nuit Video.</strong>
-            </p>
-          </StyledLink>
         </Details>
         <ImageDiv>
-          {videoart.videoart.map((item, index) => (
+          {offtheair.offtheair.map((item, index) => (
             <ImgMap
               key={index}
               src={item.link}
@@ -107,12 +97,13 @@ function VideoArt() {
         )}
       </LeftRow>
       <RightRow>
-        <iframe
-          title="vimeo-player"
-          src="https://player.vimeo.com/video/222565611?h=5e900c3629"
-          width="640"
-          height="360"
-          frameBorder="0"
+        <Iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/diXjUiyFLVE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         />
       </RightRow>
@@ -207,4 +198,4 @@ const Iframe = styled.iframe`
   /* width: 80%; */
 `;
 
-export default VideoArt;
+export default OffTheAir;

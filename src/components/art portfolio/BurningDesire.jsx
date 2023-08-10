@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function BurningDesire() {
   const [visible, setVisible] = useState(false);
@@ -14,7 +14,7 @@ function BurningDesire() {
   }, []);
 
   return (
-    <Wrapper className={visible ? 'fade-in' : ''}>
+    <Wrapper className={visible ? "fade-in" : ""}>
       <LeftRow>
         <H1>THE BURNING DESIRE IN A DOLLAR BILL</H1>
         <Info>

@@ -1,6 +1,5 @@
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
-import React from "react";
 import PersonalPortfolio from "./PersonalPortfolio";
 import Suoni from "./Suoni";
 import SportsSavvy from "./SportsSavvy";

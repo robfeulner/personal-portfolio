@@ -1,22 +1,30 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { AiOutlineInstagram, AiOutlineGithub } from 'react-icons/ai';
-import { BsVimeo } from 'react-icons/bs';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai";
+import { BsVimeo } from "react-icons/bs";
 
-function Header() {
+function HeaderMobile() {
   return (
     <Wrapper>
-      <NameDiv>
-        <StyledLink to="/">
-          <H1>Rob Feulner</H1>
-        </StyledLink>
-      </NameDiv>
+      <TopRow>
+        <NameDiv>
+          <StyledLink to="/">
+            <H1>Rob Feulner</H1>
+          </StyledLink>
+        </NameDiv>
+        <ImgDiv>
+          <Img
+            src="/images/vhsguy-header-05.png"
+            alt="VHS Guy by Jennifer Brunet"
+          />
+        </ImgDiv>
+      </TopRow>
       <TextAndIconsDiv>
         <IconsDiv>
           <StyledLink to="http://instagram.com/bleunuitvideo" target="_blank">
             <AiOutlineInstagram />
-          </StyledLink>
-          {' '}
+          </StyledLink>{" "}
           <StyledLink to="https://vimeo.com/robfeulner" target="_blank">
             <BsVimeo />
           </StyledLink>
@@ -39,31 +47,25 @@ function Header() {
           </StyledLink>
         </LinksDiv>
       </TextAndIconsDiv>
-      <ImgDiv>
-        <Img
-          src="/images/vhsguy-header-05.png"
-          alt="VHS Guy by Jennifer Brunet"
-        />
-      </ImgDiv>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   /* justify-content: space-between; */
   align-items: flex-end;
   margin-bottom: 5%;
   gap: 5%;
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5%;
-    flex-wrap: nowrap;
-  }
+`;
+
+const TopRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
 `;
 
 const NameDiv = styled.div`
@@ -77,7 +79,7 @@ const NameDiv = styled.div`
   /* gap: 2vh; */
   @media screen and (max-width: 768px) {
     background: none;
-    order: 0;
+    width: 25%;
   }
 `;
 
@@ -85,8 +87,8 @@ const H1 = styled.h1`
   font-size: 5em;
   margin: 0;
   @media screen and (max-width: 768px) {
-    font-size: 4em;
-    margin-top: 10%;
+    font-size: 3em;
+    margin: 0;
   }
 `;
 
@@ -96,8 +98,8 @@ const TextAndIconsDiv = styled.div`
   width: 40%;
   gap: 2vh;
   @media screen and (max-width: 768px) {
-    flex-direction: row;
-    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
   }
 `;
 
@@ -108,7 +110,8 @@ const LinksDiv = styled.div`
   justify-content: space-between;
   gap: 2vh;
   @media screen and (max-width: 768px) {
-    order: 2;
+    flex-direction: row;
+    /* align-items: center; */
   }
 `;
 
@@ -120,8 +123,6 @@ const IconsDiv = styled.div`
   justify-content: flex-end;
   @media screen and (max-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
-    order: 3;
   }
 `;
 
@@ -148,7 +149,6 @@ const ImgDiv = styled.div`
   margin: 0;
   @media screen and (max-width: 768px) {
     width: 25%;
-    order: 1;
   }
 `;
 
@@ -157,4 +157,4 @@ const Img = styled.img`
   margin: 0;
 `;
 
-export default Header;
+export default HeaderMobile;
