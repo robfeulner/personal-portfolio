@@ -1,54 +1,53 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai";
-import { BsVimeo } from "react-icons/bs";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { AiOutlineInstagram, AiOutlineGithub } from 'react-icons/ai';
+import { BsVimeo } from 'react-icons/bs';
 
-const Header = () => {
+function Header() {
   return (
-    <>
-      <Wrapper>
-        <NameDiv>
-          <StyledLink to="/">
-            <H1>Rob Feulner</H1>
+    <Wrapper>
+      <NameDiv>
+        <StyledLink to="/">
+          <H1>Rob Feulner</H1>
+        </StyledLink>
+      </NameDiv>
+      <TextAndIconsDiv>
+        <IconsDiv>
+          <StyledLink to="http://instagram.com/bleunuitvideo" target="_blank">
+            <AiOutlineInstagram />
           </StyledLink>
-        </NameDiv>
-        <TextAndIconsDiv>
-          <IconsDiv>
-            <StyledLink to="http://instagram.com/bleunuitvideo" target="_blank">
-              <AiOutlineInstagram />
-            </StyledLink>{" "}
-            <StyledLink to="https://vimeo.com/robfeulner" target="_blank">
-              <BsVimeo />
-            </StyledLink>
-            <StyledLink to="https://github.com/robfeulner" target="_blank">
-              <AiOutlineGithub />
-            </StyledLink>
-          </IconsDiv>
-          <LinksDiv>
-            <StyledLink to="/art-portfolio">
-              <SpanLink>Art Portfolio</SpanLink>
-            </StyledLink>
-            <StyledLink to="/web-portfolio">
-              <SpanLink>Web Portfolio</SpanLink>
-            </StyledLink>
-            <StyledLink to="/bio">
-              <SpanLink>Bio + Contact</SpanLink>
-            </StyledLink>
-            <StyledLink to="http://bleunuitvideo.com" target="_blank">
-              <SpanLink>Bleu Nuit Video</SpanLink>
-            </StyledLink>
-          </LinksDiv>
-        </TextAndIconsDiv>
-        <ImgDiv>
-          <Img
-            src="/images/vhsguy-header-05.png"
-            alt="VHS Guy by Jennifer Brunet"
-          />
-        </ImgDiv>
-      </Wrapper>
-    </>
+          {' '}
+          <StyledLink to="https://vimeo.com/robfeulner" target="_blank">
+            <BsVimeo />
+          </StyledLink>
+          <StyledLink to="https://github.com/robfeulner" target="_blank">
+            <AiOutlineGithub />
+          </StyledLink>
+        </IconsDiv>
+        <LinksDiv>
+          <StyledLink to="/art-portfolio">
+            <SpanLink>Art Portfolio</SpanLink>
+          </StyledLink>
+          <StyledLink to="/web-portfolio">
+            <SpanLink>Web Portfolio</SpanLink>
+          </StyledLink>
+          <StyledLink to="/bio">
+            <SpanLink>Bio + Contact</SpanLink>
+          </StyledLink>
+          <StyledLink to="http://bleunuitvideo.com" target="_blank">
+            <SpanLink>Bleu Nuit Video</SpanLink>
+          </StyledLink>
+        </LinksDiv>
+      </TextAndIconsDiv>
+      <ImgDiv>
+        <Img
+          src="/images/vhsguy-header-05.png"
+          alt="VHS Guy by Jennifer Brunet"
+        />
+      </ImgDiv>
+    </Wrapper>
   );
-};
+}
 
 const Wrapper = styled.div`
   display: flex;

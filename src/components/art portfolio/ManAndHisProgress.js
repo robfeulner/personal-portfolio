@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import offtheair from "./images.json";
-import ImageModal from "./ImageModal";
+import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import offtheair from './images.json';
+import ImageModal from './ImageModal';
 
-const ManAndHisProgress = () => {
+function ManAndHisProgress() {
   const [visible, setVisible] = useState(false);
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -23,9 +23,7 @@ const ManAndHisProgress = () => {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = offtheair.offtheair.filter((item) => {
-      return offtheair.offtheair.indexOf(item) === newIndex;
-    });
+    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -39,9 +37,7 @@ const ManAndHisProgress = () => {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = offtheair.offtheair.filter((item) => {
-      return offtheair.offtheair.indexOf(item) === newIndex;
-    });
+    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -57,7 +53,7 @@ const ManAndHisProgress = () => {
 
   return (
     <>
-      <Wrapper className={visible ? "fade-in" : ""}>
+      <Wrapper className={visible ? 'fade-in' : ''}>
         <LeftRow>
           <H1>Man and His Progress</H1>
           <Info>
@@ -90,13 +86,19 @@ const ManAndHisProgress = () => {
           <PBold>CREDITS</PBold>
           <Credits>
             <CreditLine>
-              <BoldSpan>Voice #1:</BoldSpan> Maica Armata-Boles
+              <BoldSpan>Voice #1:</BoldSpan>
+              {' '}
+              Maica Armata-Boles
             </CreditLine>
             <CreditLine>
-              <BoldSpan>Voice #2:</BoldSpan> Matt Smith
+              <BoldSpan>Voice #2:</BoldSpan>
+              {' '}
+              Matt Smith
             </CreditLine>
             <CreditLine>
-              <BoldSpan>Script Translation:</BoldSpan> Samuel Bonneau
+              <BoldSpan>Script Translation:</BoldSpan>
+              {' '}
+              Samuel Bonneau
             </CreditLine>
           </Credits>
         </LeftRow>
@@ -106,9 +108,9 @@ const ManAndHisProgress = () => {
             src="https://player.vimeo.com/video/206337245?h=505a53b22f"
             width="640"
             height="360"
-            frameborder="0"
+            frameBorder="0"
             allowfullscreen
-          ></iframe>
+          />
         </RightRow>
       </Wrapper>
       <ImageArray>
@@ -124,7 +126,7 @@ const ManAndHisProgress = () => {
       <PBold>Images courtesy of Never Apart</PBold>
     </>
   );
-};
+}
 
 const Wrapper = styled.div`
   display: flex;

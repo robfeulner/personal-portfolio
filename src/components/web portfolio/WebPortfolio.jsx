@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import PersonalPortfolio from "./PersonalPortfolio";
 import Suoni from "./Suoni";
 import SportsSavvy from "./SportsSavvy";
 
-const WebPortfolio = () => {
+function WebPortfolio() {
   const [site, setSite] = useState(null);
   const [visible, setVisible] = useState(false);
 
@@ -38,31 +38,29 @@ const WebPortfolio = () => {
   };
 
   return (
-    <>
-      <Wrapper className={visible ? "fade-in" : ""}>
-        <LeftColumn>
-          <H1 onClick={handleFalse}>WEB PORTFOLIO</H1>
-          <LinkDiv>
-            <H2 onClick={handlePortfolio}>Personal Portfolio</H2>
-            <H2 onClick={handleSuoni}>Suoni Per Il Popolo Archive</H2>
-            <H2 onClick={handleSportsSavvy}>Faux e-Commerce Website</H2>
-          </LinkDiv>
-        </LeftColumn>
-        <RightColumn>
-          {!site && (
-            <Img
-              src="/images/vhsguy-ufo-01.png"
-              alt='"VHS UFO Guy" by Jennifer Brunet'
-            />
-          )}
-          {site === "portfolio" && <PersonalPortfolio />}
-          {site === "suoni" && <Suoni />}
-          {site === "sportssavvy" && <SportsSavvy />}
-        </RightColumn>
-      </Wrapper>
-    </>
+    <Wrapper className={visible ? "fade-in" : ""}>
+      <LeftColumn>
+        <H1 onClick={handleFalse}>WEB PORTFOLIO</H1>
+        <LinkDiv>
+          <H2 onClick={handlePortfolio}>Personal Portfolio</H2>
+          <H2 onClick={handleSuoni}>Suoni Per Il Popolo Archive</H2>
+          <H2 onClick={handleSportsSavvy}>Faux e-Commerce Website</H2>
+        </LinkDiv>
+      </LeftColumn>
+      <RightColumn>
+        {!site && (
+          <Img
+            src="/images/vhsguy-ufo-01.png"
+            alt='"VHS UFO Guy" by Jennifer Brunet'
+          />
+        )}
+        {site === "portfolio" && <PersonalPortfolio />}
+        {site === "suoni" && <Suoni />}
+        {site === "sportssavvy" && <SportsSavvy />}
+      </RightColumn>
+    </Wrapper>
   );
-};
+}
 
 const Wrapper = styled.div`
   display: flex;

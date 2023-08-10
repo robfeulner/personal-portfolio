@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components";
-import { useEffect, useState } from "react";
+import styled, { css } from 'styled-components';
+import { useEffect, useState } from 'react';
 
-const ImageModal = ({
+function ImageModal({
   clickedImage,
   setClickedImage,
   handleRotationRight,
   handleRotationLeft,
-}) => {
+}) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -18,33 +18,31 @@ const ImageModal = ({
   }, []);
 
   const handleClick = (event) => {
-    if (event.target.classList.contains("dismiss-class")) {
+    if (event.target.classList.contains('dismiss-class')) {
       setClickedImage(null);
     }
   };
 
   return (
-    <>
-      <WrapperDismiss
-        onClick={handleClick}
-        className={`dismiss-class ${visible ? "fade-in" : ""}`}
-      >
-        <Img
-          src={clickedImage}
-          alt="TBD"
-          className={visible ? "fade-in" : ""}
-        />
-        <Dismiss onClick={handleClick} className="dismiss-class">
-          X
-        </Dismiss>
-        <DirectionWrapper>
-          <OverlayLeft onClick={handleRotationLeft}>LEFT</OverlayLeft>
-          <OverlayRight onClick={handleRotationRight}>RIGHT</OverlayRight>
-        </DirectionWrapper>
-      </WrapperDismiss>
-    </>
+    <WrapperDismiss
+      onClick={handleClick}
+      className={`dismiss-class ${visible ? 'fade-in' : ''}`}
+    >
+      <Img
+        src={clickedImage}
+        alt="TBD"
+        className={visible ? 'fade-in' : ''}
+      />
+      <Dismiss onClick={handleClick} className="dismiss-class">
+        X
+      </Dismiss>
+      <DirectionWrapper>
+        <OverlayLeft onClick={handleRotationLeft}>LEFT</OverlayLeft>
+        <OverlayRight onClick={handleRotationRight}>RIGHT</OverlayRight>
+      </DirectionWrapper>
+    </WrapperDismiss>
   );
-};
+}
 
 const WrapperDismiss = styled.div`
   position: fixed;

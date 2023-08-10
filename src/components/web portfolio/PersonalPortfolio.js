@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-const PersonalPortfolio = () => {
+function PersonalPortfolio() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -13,29 +13,27 @@ const PersonalPortfolio = () => {
     return () => clearTimeout(timeoutId);
   }, []);
   return (
-    <>
-      <Wrapper className={visible ? "fade-in" : ""}>
-        <h1>Personal Portfolio</h1>
-        <p>
-          This is the very site you're visiting now! No YouTube or tour needed,
-          just click around.
-        </p>
-        <p>
-          My personal portfolio was created from scratch with a combination of
-          React, CSS, and JavaScript functions. Nothing too fancy, just easy to
-          navigate and functional.
-        </p>
-        <p>"VHS Guy" illustrations by Jennifer Brunet.</p>
-        <StyledLink
-          to="https://github.com/robfeulner/personal-portfolio"
-          target="_blank"
-        >
-          <H2>View the GitHub repo, steal all my secrets.</H2>
-        </StyledLink>
-      </Wrapper>
-    </>
+    <Wrapper className={visible ? 'fade-in' : ''}>
+      <h1>Personal Portfolio</h1>
+      <p>
+        This is the very site you're visiting now! No YouTube or tour needed,
+        just click around.
+      </p>
+      <p>
+        My personal portfolio was created from scratch with a combination of
+        React, CSS, and JavaScript functions. Nothing too fancy, just easy to
+        navigate and functional.
+      </p>
+      <p>"VHS Guy" illustrations by Jennifer Brunet.</p>
+      <StyledLink
+        to="https://github.com/robfeulner/personal-portfolio"
+        target="_blank"
+      >
+        <H2>View the GitHub repo, steal all my secrets.</H2>
+      </StyledLink>
+    </Wrapper>
   );
-};
+}
 
 const Wrapper = styled.div`
   opacity: 0;

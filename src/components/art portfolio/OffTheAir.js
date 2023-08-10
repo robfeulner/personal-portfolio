@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import offtheair from "./images.json";
-import ImageModal from "./ImageModal";
+import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import offtheair from './images.json';
+import ImageModal from './ImageModal';
 
-const OffTheAir = () => {
+function OffTheAir() {
   const [visible, setVisible] = useState(false);
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -23,9 +23,7 @@ const OffTheAir = () => {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = offtheair.offtheair.filter((item) => {
-      return offtheair.offtheair.indexOf(item) === newIndex;
-    });
+    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -39,9 +37,7 @@ const OffTheAir = () => {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = offtheair.offtheair.filter((item) => {
-      return offtheair.offtheair.indexOf(item) === newIndex;
-    });
+    const newLink = offtheair.offtheair.filter((item) => offtheair.offtheair.indexOf(item) === newIndex);
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -56,66 +52,64 @@ const OffTheAir = () => {
   }, []);
 
   return (
-    <>
-      <Wrapper className={visible ? "fade-in" : ""}>
-        <LeftRow>
-          <H1>Off the Air episode 5x04 "NewNow (Analog Video Remix)"</H1>
-          <Info>
-            <PBold>Television / Web Broadcast . 2018 . 11:51</PBold>
-            <PBold>Produced by The Cartoon Network / Adult Swim</PBold>
-          </Info>
-          <Details>
-            <p>
-              Adult Swim commissioned a "video remix" for an episode of their
-              late-night experimental anthology series, Off the Air. An older
-              episode of the series was run through a series of VCRs and video
-              manipulation devices, adding strobing feedback to the image and
-              pitched down warbles to the audio. The intent was to unearth a
-              once clean episode after decades of decay and damage. Suddenly the
-              Turner archives in Atlanta are no safer than one's childhood
-              flooded basement. Your old tapes play, but they will never be the
-              same.
-            </p>
+    <Wrapper className={visible ? 'fade-in' : ''}>
+      <LeftRow>
+        <H1>Off the Air episode 5x04 "NewNow (Analog Video Remix)"</H1>
+        <Info>
+          <PBold>Television / Web Broadcast . 2018 . 11:51</PBold>
+          <PBold>Produced by The Cartoon Network / Adult Swim</PBold>
+        </Info>
+        <Details>
+          <p>
+            Adult Swim commissioned a "video remix" for an episode of their
+            late-night experimental anthology series, Off the Air. An older
+            episode of the series was run through a series of VCRs and video
+            manipulation devices, adding strobing feedback to the image and
+            pitched down warbles to the audio. The intent was to unearth a
+            once clean episode after decades of decay and damage. Suddenly the
+            Turner archives in Atlanta are no safer than one's childhood
+            flooded basement. Your old tapes play, but they will never be the
+            same.
+          </p>
 
-            <p>
-              The episode can be viewed on YouTube, the Adult Swim website, and
-              scheduled airings on The Cartoon Network.
-            </p>
-          </Details>
-          <ImageDiv>
-            {offtheair.offtheair.map((item, index) => (
-              <ImgMap
-                key={index}
-                src={item.link}
-                alt={item.description}
-                onClick={() => handleClick(item, index)}
-              />
-            ))}
-          </ImageDiv>
-          {clickedImage && (
-            <ImageModal
-              clickedImage={clickedImage}
-              handleRotationRight={handleRotationRight}
-              handleRotationLeft={handleRotationLeft}
-              setClickedImage={setClickedImage}
+          <p>
+            The episode can be viewed on YouTube, the Adult Swim website, and
+            scheduled airings on The Cartoon Network.
+          </p>
+        </Details>
+        <ImageDiv>
+          {offtheair.offtheair.map((item, index) => (
+            <ImgMap
+              key={index}
+              src={item.link}
+              alt={item.description}
+              onClick={() => handleClick(item, index)}
             />
-          )}
-        </LeftRow>
-        <RightRow>
-          <Iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/diXjUiyFLVE"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          />
-        </RightRow>
-      </Wrapper>
-    </>
+          ))}
+        </ImageDiv>
+        {clickedImage && (
+        <ImageModal
+          clickedImage={clickedImage}
+          handleRotationRight={handleRotationRight}
+          handleRotationLeft={handleRotationLeft}
+          setClickedImage={setClickedImage}
+        />
+        )}
+      </LeftRow>
+      <RightRow>
+        <Iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/diXjUiyFLVE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        />
+      </RightRow>
+    </Wrapper>
   );
-};
+}
 
 const Wrapper = styled.div`
   display: flex;

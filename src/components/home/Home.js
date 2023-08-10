@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { useState, useEffect } from "react";
-import Updates from "./Updates";
-import BioDiv from "../bio/BioDiv";
+import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+import Updates from './Updates';
+import BioDiv from '../bio/BioDiv';
 
-const Home = () => {
+function Home() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -15,20 +15,18 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <Wrapper className={visible ? "fade-in" : ""}>
-        <BioDiv />
-        <SecondRow>
-          <ImgPress
-            src="/images/robfeulner_press08-1200.jpg"
-            alt="Rob Feulner"
-          />
-          <Updates />
-        </SecondRow>
-      </Wrapper>
-    </>
+    <Wrapper className={visible ? 'fade-in' : ''}>
+      <BioDiv />
+      <SecondRow>
+        <ImgPress
+          src="/images/robfeulner_press08-1200.jpg"
+          alt="Rob Feulner"
+        />
+        <Updates />
+      </SecondRow>
+    </Wrapper>
   );
-};
+}
 
 const Wrapper = styled.div`
   display: flex;

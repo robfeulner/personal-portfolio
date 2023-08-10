@@ -1,24 +1,24 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import styled from "styled-components";
-import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
-import GlobalStyles from "./components/global/GlobalStyles";
-import Header from "./components/header and footer/Header";
-import HeaderMobile from "./components/header and footer/HeaderMobile";
-import Home from "./components/home/Home";
-import ArtPortfolio from "./components/art portfolio/ArtPortfolio";
-import WebPortfolio from "./components/web portfolio/WebPortfolio";
-import Bio from "./components/bio/Bio";
-import CableBox from "./components/art portfolio/CableBox";
-import PivotForwardCollapse from "./components/art portfolio/PivotForwardCollapse";
-import Carmen from "./components/art portfolio/Carmen";
-import OffTheAir from "./components/art portfolio/OffTheAir";
-import VideoArt from "./components/art portfolio/VideoArt";
-import BurningDesire from "./components/art portfolio/BurningDesire";
-import ManAndHisProgress from "./components/art portfolio/ManAndHisProgress";
-import PuertoRicoTautology from "./components/art portfolio/PuertoRicoTautology";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import GlobalStyles from './components/global/GlobalStyles';
+import Header from './components/header and footer/Header';
+import HeaderMobile from './components/header and footer/HeaderMobile';
+import Home from './components/home/Home';
+import ArtPortfolio from './components/art portfolio/ArtPortfolio';
+import WebPortfolio from './components/web portfolio/WebPortfolio';
+import Bio from './components/bio/Bio';
+import CableBox from './components/art portfolio/CableBox';
+import PivotForwardCollapse from './components/art portfolio/PivotForwardCollapse';
+import Carmen from './components/art portfolio/Carmen';
+import OffTheAir from './components/art portfolio/OffTheAir';
+import VideoArt from './components/art portfolio/VideoArt';
+import BurningDesire from './components/art portfolio/BurningDesire';
+import ManAndHisProgress from './components/art portfolio/ManAndHisProgress';
+import PuertoRicoTautology from './components/art portfolio/PuertoRicoTautology';
 
-const App = () => {
+function App() {
   // const [isMobile, setIsMobile] = useState(false);
   // console.log(isMobile);
 
@@ -72,6 +72,6 @@ const App = () => {
     </Wrapper> */}
     </BrowserRouter>
   );
-};
+}
 
 export default App;

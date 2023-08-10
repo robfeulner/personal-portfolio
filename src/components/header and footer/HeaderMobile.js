@@ -1,13 +1,12 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai";
-import { BsVimeo } from "react-icons/bs";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { AiOutlineInstagram, AiOutlineGithub } from 'react-icons/ai';
+import { BsVimeo } from 'react-icons/bs';
 
-const HeaderMobile = () => {
+function HeaderMobile() {
   return (
-    <>
-      <Wrapper>
-        <TopRow>
+    <Wrapper>
+      <TopRow>
         <NameDiv>
           <StyledLink to="/">
             <H1>Rob Feulner</H1>
@@ -19,38 +18,38 @@ const HeaderMobile = () => {
             alt="VHS Guy by Jennifer Brunet"
           />
         </ImgDiv>
-        </TopRow>
-        <TextAndIconsDiv>
-          <IconsDiv>
-            <StyledLink to="http://instagram.com/bleunuitvideo" target="_blank">
-              <AiOutlineInstagram />
-            </StyledLink>{" "}
-            <StyledLink to="https://vimeo.com/robfeulner" target="_blank">
-              <BsVimeo />
-            </StyledLink>
-            <StyledLink to="https://github.com/robfeulner" target="_blank">
-              <AiOutlineGithub />
-            </StyledLink>
-          </IconsDiv>
-          <LinksDiv>
-            <StyledLink to="/art-portfolio">
-              <SpanLink>Art Portfolio</SpanLink>
-            </StyledLink>
-            <StyledLink to="/web-portfolio">
-              <SpanLink>Web Portfolio</SpanLink>
-            </StyledLink>
-            <StyledLink to="/bio">
-              <SpanLink>Bio + Contact</SpanLink>
-            </StyledLink>
-            <StyledLink to="http://bleunuitvideo.com" target="_blank">
-              <SpanLink>Bleu Nuit Video</SpanLink>
-            </StyledLink>
-          </LinksDiv>
-        </TextAndIconsDiv>
-      </Wrapper>
-    </>
+      </TopRow>
+      <TextAndIconsDiv>
+        <IconsDiv>
+          <StyledLink to="http://instagram.com/bleunuitvideo" target="_blank">
+            <AiOutlineInstagram />
+          </StyledLink>
+          {' '}
+          <StyledLink to="https://vimeo.com/robfeulner" target="_blank">
+            <BsVimeo />
+          </StyledLink>
+          <StyledLink to="https://github.com/robfeulner" target="_blank">
+            <AiOutlineGithub />
+          </StyledLink>
+        </IconsDiv>
+        <LinksDiv>
+          <StyledLink to="/art-portfolio">
+            <SpanLink>Art Portfolio</SpanLink>
+          </StyledLink>
+          <StyledLink to="/web-portfolio">
+            <SpanLink>Web Portfolio</SpanLink>
+          </StyledLink>
+          <StyledLink to="/bio">
+            <SpanLink>Bio + Contact</SpanLink>
+          </StyledLink>
+          <StyledLink to="http://bleunuitvideo.com" target="_blank">
+            <SpanLink>Bleu Nuit Video</SpanLink>
+          </StyledLink>
+        </LinksDiv>
+      </TextAndIconsDiv>
+    </Wrapper>
   );
-};
+}
 
 const Wrapper = styled.div`
   display: flex;
@@ -67,7 +66,7 @@ const TopRow = styled.div`
 display: flex;
 flex-direction: row;
 gap: 20%;
-`
+`;
 
 const NameDiv = styled.div`
   background-image: url("/images/vhsguy-header-04.png");

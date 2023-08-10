@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import videoart from "./images.json";
-import ImageModal from "./ImageModal";
+import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import videoart from './images.json';
+import ImageModal from './ImageModal';
 
-const VideoArt = () => {
+function VideoArt() {
   const [visible, setVisible] = useState(false);
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -23,9 +23,7 @@ const VideoArt = () => {
       return;
     }
     const newIndex = currentIndex + 1;
-    const newLink = videoart.videoart.filter((item) => {
-      return videoart.videoart.indexOf(item) === newIndex;
-    });
+    const newLink = videoart.videoart.filter((item) => videoart.videoart.indexOf(item) === newIndex);
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -39,9 +37,7 @@ const VideoArt = () => {
     } else {
       newIndex = currentIndex - 1;
     }
-    const newLink = videoart.videoart.filter((item) => {
-      return videoart.videoart.indexOf(item) === newIndex;
-    });
+    const newLink = videoart.videoart.filter((item) => videoart.videoart.indexOf(item) === newIndex);
     const newItem = newLink[0].link;
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
@@ -56,75 +52,73 @@ const VideoArt = () => {
   }, []);
 
   return (
-    <>
-      <Wrapper className={visible ? "fade-in" : ""}>
-        <LeftRow>
-          <H1>Video Art for Conditional Malaise</H1>
-          <Info>
-            <PBold>DVD / Performance / Installation . 2017 . 29:04</PBold>
-          </Info>
-          <Details>
-            <p>
-              Produced between 2016 and 2017, "Video Art for Conditional
-              Malaise" is a tool intended for those suffering from bouts of
-              seasonal depression or general malaise in our modern political
-              climate.
-            </p>
+    <Wrapper className={visible ? 'fade-in' : ''}>
+      <LeftRow>
+        <H1>Video Art for Conditional Malaise</H1>
+        <Info>
+          <PBold>DVD / Performance / Installation . 2017 . 29:04</PBold>
+        </Info>
+        <Details>
+          <p>
+            Produced between 2016 and 2017, "Video Art for Conditional
+            Malaise" is a tool intended for those suffering from bouts of
+            seasonal depression or general malaise in our modern political
+            climate.
+          </p>
 
+          <p>
+            For thirty minutes flowers bloom and float into video feedback
+            ether, set to the experimental-ambient music of Billy Gomberg. For
+            its intended effect, please view using a projector against a large
+            white wall, with the audio set to a louder than usual volume. The
+            goal is full immersion.
+          </p>
+          <p>
+            Premiere public screening occurred at Newfields Indianapolis
+            Museum of Art in April 2018. A live variation of the piece was
+            performed with Billy Gomberg in Brooklyn, NY in April 2017.
+          </p>
+          <StyledLink
+            to="https://bleunuitvideo.bandcamp.com/album/video-art-for-conditional-malaise"
+            target="_blank"
+          >
             <p>
-              For thirty minutes flowers bloom and float into video feedback
-              ether, set to the experimental-ambient music of Billy Gomberg. For
-              its intended effect, please view using a projector against a large
-              white wall, with the audio set to a louder than usual volume. The
-              goal is full immersion.
+              <strong>DVD available through Bleu Nuit Video.</strong>
             </p>
-            <p>
-              Premiere public screening occurred at Newfields Indianapolis
-              Museum of Art in April 2018. A live variation of the piece was
-              performed with Billy Gomberg in Brooklyn, NY in April 2017.
-            </p>
-            <StyledLink
-              to="https://bleunuitvideo.bandcamp.com/album/video-art-for-conditional-malaise"
-              target="_blank"
-            >
-              <p>
-                <strong>DVD available through Bleu Nuit Video.</strong>
-              </p>
-            </StyledLink>
-          </Details>
-          <ImageDiv>
-            {videoart.videoart.map((item, index) => (
-              <ImgMap
-                key={index}
-                src={item.link}
-                alt={item.description}
-                onClick={() => handleClick(item, index)}
-              />
-            ))}
-          </ImageDiv>
-          {clickedImage && (
-            <ImageModal
-              clickedImage={clickedImage}
-              handleRotationRight={handleRotationRight}
-              handleRotationLeft={handleRotationLeft}
-              setClickedImage={setClickedImage}
+          </StyledLink>
+        </Details>
+        <ImageDiv>
+          {videoart.videoart.map((item, index) => (
+            <ImgMap
+              key={index}
+              src={item.link}
+              alt={item.description}
+              onClick={() => handleClick(item, index)}
             />
-          )}
-        </LeftRow>
-        <RightRow>
-          <iframe
-            title="vimeo-player"
-            src="https://player.vimeo.com/video/222565611?h=5e900c3629"
-            width="640"
-            height="360"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </RightRow>
-      </Wrapper>
-    </>
+          ))}
+        </ImageDiv>
+        {clickedImage && (
+        <ImageModal
+          clickedImage={clickedImage}
+          handleRotationRight={handleRotationRight}
+          handleRotationLeft={handleRotationLeft}
+          setClickedImage={setClickedImage}
+        />
+        )}
+      </LeftRow>
+      <RightRow>
+        <iframe
+          title="vimeo-player"
+          src="https://player.vimeo.com/video/222565611?h=5e900c3629"
+          width="640"
+          height="360"
+          frameBorder="0"
+          allowfullscreen
+        />
+      </RightRow>
+    </Wrapper>
   );
-};
+}
 
 const Wrapper = styled.div`
   display: flex;
