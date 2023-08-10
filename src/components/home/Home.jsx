@@ -36,10 +36,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const BioSpan = styled.span`
-  font-size: 1.25em;
-`;
-
 const SecondRow = styled.div`
   display: flex;
   flex-direction: row;
@@ -51,8 +47,6 @@ const SecondRow = styled.div`
     width: 175vw;
   }
 `;
-
-const ImgRow = styled.div``;
 
 const ImgPress = styled.img`
   max-width: 50%;

@@ -24,7 +24,7 @@ function Carmen() {
     }
     const newIndex = currentIndex + 1;
     const newLink = carmen.carmen.filter(
-      (item) => carmen.carmen.indexOf(item) === newIndex,
+      (item) => carmen.carmen.indexOf(item) === newIndex
     );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
@@ -40,7 +40,7 @@ function Carmen() {
       newIndex = currentIndex - 1;
     }
     const newLink = carmen.carmen.filter(
-      (item) => carmen.carmen.indexOf(item) === newIndex,
+      (item) => carmen.carmen.indexOf(item) === newIndex
     );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
@@ -89,7 +89,7 @@ function Carmen() {
         <ImageDiv>
           {carmen.carmen.map((item, index) => (
             <ImgMap
-              key={index}
+              key={item.link}
               src={item.link}
               alt={item.description}
               onClick={() => handleClick(item, index)}
@@ -204,23 +204,6 @@ const ImageDiv = styled.div`
 const ImgMap = styled.img`
   width: 30%;
   cursor: pointer;
-`;
-
-const Credits = styled.div`
-  /* margin-top: 20px; */
-`;
-
-const CreditLine = styled.div``;
-
-const BoldSpan = styled.span`
-  font-weight: bold;
-`;
-
-const ImgPoster = styled.img``;
-
-const Iframe = styled.iframe`
-  margin-top: 10px;
-  /* width: 80%; */
 `;
 
 export default Carmen;

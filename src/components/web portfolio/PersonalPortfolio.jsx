@@ -16,7 +16,7 @@ function PersonalPortfolio() {
     <Wrapper className={visible ? "fade-in" : ""}>
       <h1>Personal Portfolio</h1>
       <p>
-        This is the very site you're visiting now! No YouTube or tour needed,
+        This is the very site you&apos;re visiting now! No YouTube or tour needed,
         just click around.
       </p>
       <p>

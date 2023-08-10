@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["airbnb", "prettier"],
+  extends: ["prettier"],
   overrides: [
     {
       env: {
@@ -18,8 +18,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
+    ecmaFeatures: { jsx: true },
   },
   rules: {
     quotes: ["error", "double"],
+    "react/prop-types": 0,
   },
 };

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 function BurningDesire() {
   const [visible, setVisible] = useState(false);
@@ -138,43 +137,8 @@ const RightRow = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)`
-  &:visited {
-    color: black;
-  }
-  &:hover {
-    color: red;
-  }
-`;
-
-const ImageDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-`;
-
-const ImgMap = styled.img`
-  width: 30%;
-  cursor: pointer;
-`;
-
-const Credits = styled.div`
-  /* margin-top: 20px; */
-`;
-
-const CreditLine = styled.div``;
-
-const BoldSpan = styled.span`
-  font-weight: bold;
-`;
-
 const Img = styled.img`
   width: 480px;
-`;
-
-const Iframe = styled.iframe`
-  width: 100%;
 `;
 
 export default BurningDesire;

@@ -24,7 +24,7 @@ function CableBox() {
     }
     const newIndex = currentIndex + 1;
     const newLink = cablebox.cablebox.filter(
-      (item) => cablebox.cablebox.indexOf(item) === newIndex,
+      (item) => cablebox.cablebox.indexOf(item) === newIndex
     );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
@@ -40,7 +40,7 @@ function CableBox() {
       newIndex = currentIndex - 1;
     }
     const newLink = cablebox.cablebox.filter(
-      (item) => cablebox.cablebox.indexOf(item) === newIndex,
+      (item) => cablebox.cablebox.indexOf(item) === newIndex
     );
     const newItem = newLink[0].link;
     setClickedImage(newItem);
@@ -94,9 +94,9 @@ function CableBox() {
 
           <p>
             Under non-exclusive distribution with Vidéographe. For screening
-            consideration please email info [at] bleunuitvideo [dot] com. I'm
-            also very interested in public access television broadcasts, and
-            have developed a 28-minute program which includes films by{" "}
+            consideration please email info [at] bleunuitvideo [dot] com.
+            I&apos;m also very interested in public access television broadcasts,
+            and have developed a 28-minute program which includes films by{" "}
             <StyledLink
               to="https://palomakop.tv/works/magnetic-field-recordings/"
               target="_blank"
@@ -116,7 +116,7 @@ function CableBox() {
         <ImageDiv>
           {cablebox.cablebox.map((item, index) => (
             <ImgMap
-              key={index}
+              key={item.link}
               src={item.link}
               alt={item.description}
               onClick={() => handleClick(item, index)}
