@@ -58,7 +58,7 @@ function PivotForwardCollapse() {
           OR (USA) . April/May 2018
         </CreditLine>
         <CreditLine>
-          <BoldSpan>Correspondance/Correspondence (Vidégraphe)</BoldSpan>.
+          <BoldSpan>Correspondance/Correspondence (Vidéographe)</BoldSpan>.
           Montréal, QC (Canada) . Oct 2020
         </CreditLine>
         <CreditLine>
