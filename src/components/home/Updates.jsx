@@ -23,7 +23,7 @@ function Updates() {
         to="https://www.eventbrite.ca/e/exploration-de-lart-video-a-travers-le-vhs-et-le-glitch-analogique-tickets-690986086987?aff=oddtdtcreator"
         target="_blank"
       >
-        <P>Sign up via Eastern Bloc</P>
+        <P>Sign up via Eastern Bloc.</P>
       </StyledLink>
       <P>
         <strong>April 19th, 2023</strong>
