@@ -12,7 +12,7 @@ function Updates() {
       <P>
         I&apos;ll be giving another Analog Video Glitch workshop alongside
         Guillaume Vallée and Ganesh Baron Aloir this coming January at Eastern
-        Bloc. One day one Guillaume and I will be teaching the basics of video
+        Bloc. On day one Guillaume and I will be teaching the basics of video
         glitch forms, from video feedback to VHS manipulation. We'll have an
         assortment of circuit bent machinery for the class to use and
         experiment, recording direct to tape. Day two Ganesh will be leading the
