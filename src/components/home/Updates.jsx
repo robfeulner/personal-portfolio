@@ -74,7 +74,6 @@ const Title = styled.h1`
 
 const P = styled.p`
   font-size: 1.25em;
-  margin-top: -5px;
 `;
 
 const StyledLink = styled(Link)`
