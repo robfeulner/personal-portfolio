@@ -6,9 +6,9 @@ function Updates() {
   return (
     <Wrapper>
       <Title>LATEST UPDATES</Title>
-      <P>
+      <h2>
         <strong>October 4th, 2023</strong>
-      </P>
+      </h2>
       <P>
         My film{" "}
         <StyledLink to="https://robfeulner.com/art-portfolio/cable-box">
@@ -23,9 +23,9 @@ function Updates() {
       <StyledLink to="https://www.instagram.com/p/Cxdi6qqLo2R/" target="_blank">
         <P>Slightly more info.</P>
       </StyledLink>
-      <P>
+      <h2>
         <strong>September 2nd, 2023</strong>
-      </P>
+      </h2>
       <P>
         I&apos;ll be giving another Analog Video Glitch workshop alongside
         Guillaume Vallée and Ganesh Baron Aloir this coming January at Eastern
@@ -42,9 +42,9 @@ function Updates() {
       >
         <P>Sign up via Eastern Bloc.</P>
       </StyledLink>
-      <P>
+      <h2>
         <strong>April 19th, 2023</strong>
-      </P>
+      </h2>
       <P>
         THE DIABETIC, a feature-length film by Mitchell Stafiej, is now
         available for free streaming on Tubi. I created visual effects seen
@@ -74,6 +74,7 @@ const Title = styled.h1`
 
 const P = styled.p`
   font-size: 1.25em;
+  margin-top: -5px;
 `;
 
 const StyledLink = styled(Link)`
