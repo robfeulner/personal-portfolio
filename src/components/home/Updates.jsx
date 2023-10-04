@@ -7,6 +7,23 @@ function Updates() {
     <Wrapper>
       <Title>LATEST UPDATES</Title>
       <P>
+        <strong>October 4th, 2023</strong>
+      </P>
+      <P>
+        My film{" "}
+        <StyledLink to="https://robfeulner.com/art-portfolio/cable-box">
+          Cable Box
+        </StyledLink>{" "}
+        will be playing at the Maison de la culture Janine-Sutto on Thursday
+        October 5th @ 7:30PM. There will be two other experimental shorts I'm
+        looking forward to, "Ele of the Dark" by Yace Sula, and "The Future of
+        Colour" by Emily Sirota. Round table discussion to follow, watch me
+        flounder.
+      </P>
+      <StyledLink to="https://www.instagram.com/p/Cxdi6qqLo2R/" target="_blank">
+        <P>Slightly more info.</P>
+      </StyledLink>
+      <P>
         <strong>September 2nd, 2023</strong>
       </P>
       <P>
