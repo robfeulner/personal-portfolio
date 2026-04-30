@@ -15,6 +15,7 @@ import VideoArt from "./components/art portfolio/VideoArt";
 import BurningDesire from "./components/art portfolio/BurningDesire";
 import ManAndHisProgress from "./components/art portfolio/ManAndHisProgress";
 import PuertoRicoTautology from "./components/art portfolio/PuertoRicoTautology";
+import SVP from "./components/art portfolio/SVP";
 
 function App() {
   // const [isMobile, setIsMobile] = useState(false);
@@ -62,6 +63,7 @@ function App() {
             path="/art-portfolio/puerto-rico-tautology"
             element={<PuertoRicoTautology />}
           />
+          <Route path="/art-portfolio/svp" element={<SVP />} />
           <Route path="/web-portfolio" element={<WebPortfolio />} />
           <Route path="/bio" element={<Bio />} />
         </Routes>

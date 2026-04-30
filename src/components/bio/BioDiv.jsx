@@ -5,7 +5,7 @@ function BioDiv() {
   return (
     <Wrapper>
       <BioSpan>
-        Rob Feulner (b. 1987) is a video artist hailing from Montréal, Québec.
+        <b>Rob Feulner</b> (b. 1987) is a video artist hailing from Montréal, Québec.
         Armed with a stack of VCRs, circuit-bent equipment, and a disregard for
         electrical shocks, Rob Feulner dives wrist-deep into open machinery to
         manipulate tape heads and moving parts, creating a landscape of video
@@ -22,15 +22,21 @@ function BioDiv() {
 }
 
 const Wrapper = styled.div`
-  width: 70%;
+  width: min(100%, 70ch);
   gap: 2vh;
   @media screen and (max-width: 768px) {
-    width: 200vw;
+    width: 100%;
+    margin-top: 10%;
   }
 `;
 
 const BioSpan = styled.span`
   font-size: 1.25em;
+  line-height: 1.55;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.05em;
+  }
 `;
 
 export default BioDiv;

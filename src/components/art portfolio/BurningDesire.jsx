@@ -49,13 +49,10 @@ function BurningDesire() {
         </Details>
       </LeftRow>
       <RightRow>
-        <iframe
+        <Iframe
           title="vimeo-player"
           src="https://player.vimeo.com/video/227320062?h=f95db349bc"
-          width="640px"
-          height="360px"
-          frameBorder="0"
-          allowfullscreen
+          allowFullScreen
         />
         <Img
           src="/images/art-portfolio/burningdesire/burningdesire-01.gif"
@@ -76,9 +73,12 @@ const Wrapper = styled.div`
   &.fade-in {
     opacity: 1;
   }
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 175vw;
+    width: 100%;
   }
 `;
 
@@ -107,6 +107,18 @@ const H1 = styled.h1`
   -moz-transform: scale(1, 2);
   -o-transform: scale(1, 2);
   transform-origin: 0% 70%;
+  @media screen and (max-width: 1024px) {
+    font-size: 3.5em;
+    line-height: 1.05;
+    margin-top: 1em;
+    margin-bottom: 0;
+
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform-origin: initial;
+  }
   @media screen and (max-width: 768px) {
     font-size: 4em;
     margin-top: 1em;
@@ -132,13 +144,33 @@ const RightRow = styled.div`
   width: 50%;
   align-items: center;
   gap: 50px;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    margin: auto;
+  }
   @media screen and (max-width: 768px) {
     margin: auto;
+    width: 100%;
+  }
+`;
+
+const Iframe = styled.iframe`
+  width: 640px;
+  height: 360px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
   }
 `;
 
 const Img = styled.img`
   width: 480px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export default BurningDesire;

@@ -67,13 +67,13 @@ function PivotForwardCollapse() {
         </CreditLine>
       </LeftRow>
       <RightRow>
-        <iframe
+        <Iframe
           title="vimeo-player"
           src="https://player.vimeo.com/video/249742442?h=dbdd8484d2"
           width="640"
           height="360"
           frameBorder="0"
-          allowfullscreen
+          allowFullScreen
         />
       </RightRow>
     </Wrapper>
@@ -84,6 +84,8 @@ const Wrapper = styled.div`
   display: flex;
   /* flex-direction: column; */
   gap: 40px;
+  width: 100%;
+  max-width: 100%;
   margin-top: 20px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -92,13 +94,19 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 175vw;
+    gap: 20px;
+    width: 100%;
   }
 `;
 
 const LeftRow = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Info = styled.div`
@@ -109,6 +117,7 @@ const Info = styled.div`
 const Details = styled.div`
   display: flex;
   flex-direction: column;
+  overflow-wrap: anywhere;
 `;
 
 const H1 = styled.h1`
@@ -121,8 +130,17 @@ const H1 = styled.h1`
   -moz-transform: scale(1, 2);
   -o-transform: scale(1, 2);
   transform-origin: 0% 70%;
+  @media screen and (max-width: 1024px) {
+    font-size: 3.5em;
+    line-height: 1.05;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform-origin: initial;
+  }
   @media screen and (max-width: 768px) {
-    font-size: 4em;
+    font-size: 3em;
     margin-top: 1em;
     margin-bottom: 0;
 
@@ -143,7 +161,16 @@ const PBold = styled.p`
 const RightRow = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  flex: 0 1 640px;
+  width: 640px;
+  max-width: 100%;
+  min-width: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+const CreditLine = styled.div`
+  overflow-wrap: anywhere;
 `;
 
 const StyledLink = styled(Link)`
@@ -171,8 +198,6 @@ const Credits = styled.div`
   /* margin-top: 20px; */
 `;
 
-const CreditLine = styled.div``;
-
 const BoldSpan = styled.span`
   font-weight: bold;
 `;
@@ -181,7 +206,15 @@ const ImgPoster = styled.img``;
 
 const Iframe = styled.iframe`
   margin-top: 10px;
-  /* width: 80%; */
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 `;
 
 export default PivotForwardCollapse;

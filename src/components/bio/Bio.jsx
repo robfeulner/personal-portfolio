@@ -135,6 +135,10 @@ function Bio() {
           </p>
         </RightDiv>
       </CVSection>
+      <MobileBioImage
+        src="/images/vhsguy-ufo-01.png"
+        alt='"VHS UFO Guy" by Jennifer Brunet'
+      />
     </Wrapper>
   );
 }
@@ -142,13 +146,29 @@ function Bio() {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  padding-right: clamp(1rem, 24vw, 22rem);
+  box-sizing: border-box;
+  background-image: url("/images/vhsguy-ufo-01.png");
+  background-repeat: no-repeat;
+  background-position: right 1rem top 20%;
+  background-size: clamp(220px, 24vw, 420px);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   &.fade-in {
     opacity: 1;
   }
   @media screen and (max-width: 768px) {
-    width: 175vw;
+    width: 100%;
+    padding: 0 0.875rem 1.5rem;
+    background-size: 38vw;
+    background-position: right 0.5rem top 20%;
+  }
+
+  @media screen and (max-width: 560px) {
+    background-image: none;
   }
 `;
 
@@ -163,22 +183,77 @@ const StyledLink = styled(Link)`
 const EmailH2 = styled.h2`
   color: blue;
   transition: color 0.2s ease-in-out;
+  margin: 0.75rem 0 1.5rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
   &:hover {
     color: red;
   }
 `;
 
-const LinkDiv = styled.div``;
+const LinkDiv = styled.div`
+  width: 100%;
+`;
 
 const CVSection = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
 `;
 
 const LeftDiv = styled.div`
   min-width: 30%;
+
+  h1 {
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  @media screen and (max-width: 768px) {
+    min-width: 100%;
+  }
 `;
 
-const RightDiv = styled.div``;
+const RightDiv = styled.div`
+  width: 100%;
+
+  h3,
+  p {
+    margin-top: 0;
+    overflow-wrap: anywhere;
+  }
+
+  h3 {
+    margin-bottom: 0.35rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    line-height: 1.45;
+  }
+`;
+
+const MobileBioImage = styled.img`
+  display: none;
+
+  @media screen and (max-width: 560px) {
+    display: block;
+    width: min(78vw, 360px);
+    margin-top: 3%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;
 
 export default Bio;

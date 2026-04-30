@@ -60,12 +60,29 @@ const Wrapper = styled.div`
   align-items: flex-end;
   margin-bottom: 5%;
   gap: 5%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    align-items: stretch;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
 `;
 
 const TopRow = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+  }
 `;
 
 const NameDiv = styled.div`
@@ -79,7 +96,8 @@ const NameDiv = styled.div`
   /* gap: 2vh; */
   @media screen and (max-width: 768px) {
     background: none;
-    width: 25%;
+    width: auto;
+    max-width: 70%;
   }
 `;
 
@@ -87,8 +105,9 @@ const H1 = styled.h1`
   font-size: 5em;
   margin: 0;
   @media screen and (max-width: 768px) {
-    font-size: 3em;
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
     margin: 0;
+    line-height: 1;
   }
 `;
 
@@ -98,8 +117,10 @@ const TextAndIconsDiv = styled.div`
   width: 40%;
   gap: 2vh;
   @media screen and (max-width: 768px) {
+    width: 100%;
     align-items: flex-start;
     justify-content: center;
+    gap: 0.75rem;
   }
 `;
 
@@ -110,8 +131,9 @@ const LinksDiv = styled.div`
   justify-content: space-between;
   gap: 2vh;
   @media screen and (max-width: 768px) {
-    flex-direction: row;
-    /* align-items: center; */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.75rem;
   }
 `;
 
@@ -123,6 +145,9 @@ const IconsDiv = styled.div`
   justify-content: flex-end;
   @media screen and (max-width: 768px) {
     flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.75rem;
   }
 `;
 
@@ -143,18 +168,30 @@ const StyledLink = styled(Link)`
 
 const SpanLink = styled.span`
   font-size: 1.25em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const ImgDiv = styled.div`
   margin: 0;
   @media screen and (max-width: 768px) {
-    width: 25%;
+    width: auto;
+    flex-shrink: 0;
   }
 `;
 
 const Img = styled.img`
   height: 10em;
   margin: 0;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    width: clamp(72px, 22vw, 110px);
+    max-width: 100%;
+    display: block;
+  }
 `;
 
 export default HeaderMobile;

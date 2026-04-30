@@ -126,13 +126,10 @@ function PuertoRicoTautology() {
             2017
           </CreditLine>
         </Credits>
-        <iframe
+        <Iframe
           title="vimeo-player"
           src="https://player.vimeo.com/video/150300380?h=e757a1faaf"
-          width="640"
-          height="360"
-          frameBorder="0"
-          allowfullscreen
+          allowFullScreen
         />
       </LeftRow>
       <RightRow>
@@ -157,7 +154,7 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 175vw;
+    width: 100%;
   }
 `;
 
@@ -179,6 +176,11 @@ const Details = styled.div`
 const H1 = styled.h1`
   font-size: 5em;
   margin: 0;
+  @media screen and (max-width: 768px) {
+    font-size: 2.75em;
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+  }
 `;
 
 const PBold = styled.p`
@@ -191,6 +193,9 @@ const RightRow = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -226,13 +231,22 @@ const BoldSpan = styled.span`
 
 const ImgPoster = styled.img`
   @media screen and (max-width: 768px) {
-    width: 175vw;
+    width: 100%;
+    height: auto;
   }
 `;
 
 const Iframe = styled.iframe`
   margin-top: 10px;
-  /* width: 80%; */
+  width: 640px;
+  max-width: 100%;
+  height: 360px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export default PuertoRicoTautology;

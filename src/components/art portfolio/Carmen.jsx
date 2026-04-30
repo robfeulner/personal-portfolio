@@ -106,13 +106,10 @@ function Carmen() {
         )}
       </LeftRow>
       <RightRow>
-        <iframe
+        <VimeoFrame
           title="vimeo-player"
           src="https://player.vimeo.com/video/406939337?h=ca3aaab419"
-          width="640"
-          height="360"
-          frameBorder="0"
-          allowfullscreen
+          allowFullScreen
         />
       </RightRow>
     </Wrapper>
@@ -131,7 +128,7 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 175vw;
+    width: 100%;
   }
 `;
 
@@ -183,6 +180,20 @@ const RightRow = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const VimeoFrame = styled.iframe`
+  width: 640px;
+  height: 360px;
+  border: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -204,6 +215,9 @@ const ImageDiv = styled.div`
 const ImgMap = styled.img`
   width: 30%;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    width: 48%;
+  }
 `;
 
 export default Carmen;

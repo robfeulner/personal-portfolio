@@ -198,13 +198,11 @@ function CableBox() {
           alt="Cable Box poster"
         />
         <Iframe
-          width="840"
-          height="472"
           src="https://www.youtube.com/embed/AszPBOFhT_A"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         />
       </RightRow>
     </Wrapper>
@@ -215,6 +213,8 @@ const Wrapper = styled.div`
   display: flex;
   /* flex-direction: column; */
   gap: 40px;
+  width: 100%;
+  max-width: 100%;
   margin-top: 20px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -223,7 +223,8 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 175vw;
+    gap: 20px;
+    width: 100%;
   }
 `;
 
@@ -243,6 +244,7 @@ const Info = styled.div`
 const Details = styled.div`
   display: flex;
   flex-direction: column;
+  overflow-wrap: anywhere;
 `;
 
 const H1 = styled.h1`
@@ -255,8 +257,17 @@ const H1 = styled.h1`
   -moz-transform: scale(1, 3);
   -o-transform: scale(1, 3);
   transform-origin: 0% 70%;
+  @media screen and (max-width: 1024px) {
+    font-size: 3.5em;
+    line-height: 1.05;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform-origin: initial;
+  }
   @media screen and (max-width: 768px) {
-    font-size: 4em;
+    font-size: 3em;
     margin-top: 1em;
     margin-bottom: 0;
 
@@ -297,30 +308,51 @@ const ImageDiv = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    gap: 12px;
+  }
 `;
 
 const ImgMap = styled.img`
   width: 30%;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 6px);
+  }
 `;
 
 const Credits = styled.div`
   /* margin-top: 20px; */
 `;
 
-const CreditLine = styled.div``;
+const CreditLine = styled.div`
+  overflow-wrap: anywhere;
+`;
 
 const BoldSpan = styled.span`
   font-weight: bold;
 `;
 
-const ImgPoster = styled.img``;
+const ImgPoster = styled.img`
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+`;
 
 const Iframe = styled.iframe`
   margin-top: 10px;
-  /* width: 80%; */
+  width: 640px;
+  max-width: 100%;
+  height: 360px;
+  aspect-ratio: 16 / 9;
+  border: 0;
   @media screen and (max-width: 768px) {
     width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
   }
 `;
 

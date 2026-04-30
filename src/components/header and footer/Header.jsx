@@ -26,11 +26,11 @@ function Header() {
         </IconsDiv>
         <LinksDiv>
           <StyledLink to="/art-portfolio">
-            <SpanLink>Art Portfolio</SpanLink>
+            <SpanLink>Video Portfolio</SpanLink>
           </StyledLink>
-          <StyledLink to="/web-portfolio">
+          {/* <StyledLink to="/web-portfolio">
             <SpanLink>Web Portfolio</SpanLink>
-          </StyledLink>
+          </StyledLink> */}
           <StyledLink to="/bio">
             <SpanLink>Bio + Contact</SpanLink>
           </StyledLink>
@@ -57,12 +57,17 @@ const Wrapper = styled.div`
   align-items: flex-end;
   margin-bottom: 5%;
   gap: 5%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
   @media screen and (max-width: 768px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 5%;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
   }
 `;
 
@@ -78,6 +83,7 @@ const NameDiv = styled.div`
   @media screen and (max-width: 768px) {
     background: none;
     order: 0;
+    width: 100%;
   }
 `;
 
@@ -85,8 +91,9 @@ const H1 = styled.h1`
   font-size: 5em;
   margin: 0;
   @media screen and (max-width: 768px) {
-    font-size: 4em;
-    margin-top: 10%;
+    font-size: clamp(1.75rem, 9vw, 2.5rem);
+    margin-top: 0;
+    line-height: 1;
   }
 `;
 
@@ -96,8 +103,7 @@ const TextAndIconsDiv = styled.div`
   width: 40%;
   gap: 2vh;
   @media screen and (max-width: 768px) {
-    flex-direction: row;
-    width: 100%;
+    display: contents;
   }
 `;
 
@@ -109,6 +115,10 @@ const LinksDiv = styled.div`
   gap: 2vh;
   @media screen and (max-width: 768px) {
     order: 2;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    width: 100%;
   }
 `;
 
@@ -120,8 +130,10 @@ const IconsDiv = styled.div`
   justify-content: flex-end;
   @media screen and (max-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
-    order: 3;
+    justify-content: flex-end;
+    order: 1;
+    gap: 0.75rem;
+    align-items: center;
   }
 `;
 
@@ -142,19 +154,31 @@ const StyledLink = styled(Link)`
 
 const SpanLink = styled.span`
   font-size: 1.25em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const ImgDiv = styled.div`
   margin: 0;
   @media screen and (max-width: 768px) {
-    width: 25%;
+    width: auto;
     order: 1;
+    align-self: center;
   }
 `;
 
 const Img = styled.img`
   height: 10em;
   margin: 0;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    width: clamp(72px, 22vw, 110px);
+    max-width: 100%;
+    display: block;
+  }
 `;
 
 export default Header;

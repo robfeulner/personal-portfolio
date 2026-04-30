@@ -110,13 +110,10 @@ function VideoArt() {
         )}
       </LeftRow>
       <RightRow>
-        <iframe
+        <Iframe
           title="vimeo-player"
           src="https://player.vimeo.com/video/222565611?h=5e900c3629"
-          width="640"
-          height="360"
-          frameBorder="0"
-          allowfullscreen
+          allowFullScreen
         />
       </RightRow>
     </Wrapper>
@@ -135,7 +132,7 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 175vw;
+    width: 100%;
   }
 `;
 
@@ -158,6 +155,15 @@ const H1 = styled.h1`
   font-size: 5em;
   margin-bottom: 0;
   margin-top: 0em;
+  @media screen and (max-width: 1024px) {
+    font-size: 3.5em;
+    line-height: 1.05;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 2.75em;
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+  }
 `;
 
 const PBold = styled.p`
@@ -170,6 +176,9 @@ const RightRow = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -207,7 +216,14 @@ const ImgPoster = styled.img``;
 
 const Iframe = styled.iframe`
   margin-top: 10px;
-  /* width: 80%; */
+  width: 640px;
+  height: 360px;
+  border: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 `;
 
 export default VideoArt;

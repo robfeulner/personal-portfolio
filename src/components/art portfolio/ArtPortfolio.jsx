@@ -139,17 +139,18 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 40px;
+  box-sizing: border-box;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   &.fade-in {
     opacity: 1;
   }
   @media screen and (max-width: 768px) {
-    width: 80vh;
-    flex-direction: column;
+    width: 100%;
+    gap: 24px;
   }
 `;
 
@@ -162,9 +163,11 @@ const StyledLink = styled(Link)`
 `;
 
 const ArtDiv = styled.div`
-  flex: 1 1 auto;
-  max-width: 25%;
+  flex: 1 1 calc(25% - 30px);
+  max-width: calc(25% - 30px);
+  min-width: 260px;
   margin: 0 0 20px 0px;
+  box-sizing: border-box;
   img {
     transition: transform 0.5s;
   }
@@ -172,17 +175,30 @@ const ArtDiv = styled.div`
   &:hover img {
     transform: zoom(1.1);
   }
+  @media screen and (max-width: 1200px) {
+    flex-basis: calc(33.333% - 27px);
+    max-width: calc(33.333% - 27px);
+  }
+  @media screen and (max-width: 992px) {
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    min-width: 220px;
+  }
   @media screen and (max-width: 768px) {
+    flex: 1 1 100%;
     max-width: 100%;
-    flex: auto;
-    margin: auto;
+    min-width: 0;
+    margin: 0;
   }
 `;
 
 const Img = styled.img`
   border-radius: 5%;
+  display: block;
+  width: 100%;
+  height: auto;
   @media screen and (max-width: 768px) {
-    width: 120%;
+    width: 100%;
   }
 `;
 

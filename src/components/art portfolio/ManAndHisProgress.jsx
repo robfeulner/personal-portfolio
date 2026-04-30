@@ -100,13 +100,10 @@ function ManAndHisProgress() {
           </Credits>
         </LeftRow>
         <RightRow>
-          <iframe
+          <Iframe
             title="vimeo-player"
             src="https://player.vimeo.com/video/206337245?h=505a53b22f"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allowfullscreen
+            allowFullScreen
           />
         </RightRow>
       </Wrapper>
@@ -137,7 +134,7 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 175vw;
+    width: 100%;
   }
 `;
 
@@ -188,6 +185,9 @@ const RightRow = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -225,18 +225,28 @@ const BoldSpan = styled.span`
 const ImgPoster = styled.img``;
 
 const Iframe = styled.iframe`
-  margin-top: 10px;
-  /* width: 80%; */
+  width: 640px;
+  height: 360px;
+  border: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 `;
 
 const ImageArray = styled.div`
   display: flex;
   flex-direction: row;
   gap: 40px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   @media screen and (max-width: 768px) {
     margin-top: 10%;
     flex-direction: column;
-    width: 175vw;
+    width: 100%;
   }
 `;
 

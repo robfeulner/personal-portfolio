@@ -101,13 +101,11 @@ function OffTheAir() {
       </LeftRow>
       <RightRow>
         <Iframe
-          width="560"
-          height="315"
           src="https://www.youtube.com/embed/diXjUiyFLVE"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         />
       </RightRow>
     </Wrapper>
@@ -126,7 +124,7 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 175vw;
+    width: 100%;
   }
 `;
 
@@ -161,6 +159,9 @@ const RightRow = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -198,7 +199,15 @@ const ImgPoster = styled.img``;
 
 const Iframe = styled.iframe`
   margin-top: 10px;
-  /* width: 80%; */
+  width: 560px;
+  max-width: 100%;
+  height: 315px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export default OffTheAir;
