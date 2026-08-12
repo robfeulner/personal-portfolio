@@ -7,57 +7,19 @@ function Updates() {
     <Wrapper>
       <Title>LATEST UPDATES</Title>
       <h2>
-        <strong>October 4th, 2023</strong>
+        <strong>August 11th, 2026</strong>
       </h2>
       <P>
-        My film{" "}
-        <StyledLink to="https://robfeulner.com/art-portfolio/cable-box">
-          Cable Box
+        The premiere of{" "}
+        <StyledLink to="https://tiff.net/films/ladies-and-gentlemen-brian-mulroney">
+          Ladies and Gentlemen, Brian Mulroney
         </StyledLink>{" "}
-        will be playing at the Maison de la culture Janine-Sutto on Thursday
-        October 5th @ 7:30PM. There will be two other experimental shorts I'm
-        looking forward to, "Ele of the Dark" by Yace Sula, and "The Future of
-        Colour" by Emily Sirota. Round table discussion to follow, watch me
-        flounder.
+        will be playing at TIFF on Tuesday September 15th as part of their
+        Midnight Madness programming. It's directed by the wonderful Matthew
+        Rankin, and I did a lot of insane analog video glitch for the
+        production. Mulroney, Clark, and the rest of the Canadian conservative
+        cabal of the 70s and 80s are really put through the video ringer.
       </P>
-      <StyledLink to="https://www.instagram.com/p/Cxdi6qqLo2R/" target="_blank">
-        <P>Slightly more info.</P>
-      </StyledLink>
-      <h2>
-        <strong>September 2nd, 2023</strong>
-      </h2>
-      <P>
-        I&apos;ll be giving another Analog Video Glitch workshop alongside
-        Guillaume Vallée and Ganesh Baron Aloir this coming January at Eastern
-        Bloc. On day one Guillaume and I will be teaching the basics of video
-        glitch forms, from video feedback to VHS manipulation. We'll have an
-        assortment of circuit bent machinery for the class to use and
-        experiment, recording direct to tape. Day two Ganesh will be leading the
-        class on how to build their very own "dirty mixer." No circuit bending
-        or soldering experience required!
-      </P>
-      <StyledLink
-        to="https://www.eventbrite.ca/e/exploration-de-lart-video-a-travers-le-vhs-et-le-glitch-analogique-tickets-690986086987?aff=oddtdtcreator"
-        target="_blank"
-      >
-        <P>Sign up via Eastern Bloc.</P>
-      </StyledLink>
-      <h2>
-        <strong>April 19th, 2023</strong>
-      </h2>
-      <P>
-        THE DIABETIC, a feature-length film by Mitchell Stafiej, is now
-        available for free streaming on Tubi. I created visual effects seen
-        during the opening segment, and collaborated with Mitchell for the
-        original score under the project name FUCKERS. It&apos;s a wild film, a
-        must for fans of The Comedy, Good Time, and lo-fi mayhem.
-      </P>
-      <StyledLink
-        to="https://tubitv.com/movies/724073/the-diabetic"
-        target="_blank"
-      >
-        <P>View THE DIABETIC on Tubi.</P>
-      </StyledLink>
     </Wrapper>
   );
 }
