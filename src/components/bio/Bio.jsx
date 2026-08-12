@@ -56,7 +56,7 @@ function Bio() {
           <h1>Selected Film + Video</h1>
         </LeftDiv>
         <RightDiv>
-          <h3>“Ladies and Gentlemen: Brian Mulroney” – 105MIN – HD – 2026</h3>
+          <h3>“Ladies and Gentlemen, Brian Mulroney” – 105MIN – HD – 2026</h3>
           <p>Analog Glitch Effects</p>
           <p>Directed by Matthew Rankin</p>
           <p>Distributed by the National Film Board of Canada</p>
