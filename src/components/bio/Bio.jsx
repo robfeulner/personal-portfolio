@@ -56,6 +56,11 @@ function Bio() {
           <h1>Selected Film + Video</h1>
         </LeftDiv>
         <RightDiv>
+          <h3>“Ladies and Gentlemen: Brian Mulroney” – 105MIN – HD – 2026</h3>
+          <p>Analog Glitch Effects</p>
+          <p>Directed by Matthew Rankin</p>
+          <p>Distributed by the National Film Board of Canada</p>
+          <p>Premiered at the Toronto International Film Festival in 2026</p>
           <h3>“Cable Box” – 17MIN – HD – 2021</h3>
           <p>Director and Editor</p>
           <p>Funded by the Canada Council for the Arts</p>
@@ -100,6 +105,11 @@ function Bio() {
           <h1>Installation</h1>
         </LeftDiv>
         <RightDiv>
+          <h3>“SVP Rembobinez”</h3>
+          <p>Multi-channel interactive installation</p>
+          <p>Co-created and designed with Sam Meech</p>
+          <p>Presented in several locations across Québec</p>
+          <p>March 2024</p>
           <h3>“Unstable Intermediated Forms”</h3>
           <p>Multi-channel interactive installation</p>
           <p>Co-creator and designed with Sam Meech</p>
